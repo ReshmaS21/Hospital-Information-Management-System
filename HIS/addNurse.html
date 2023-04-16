@@ -1,0 +1,202 @@
+<html>
+
+<head>
+    <title>Nurse Registration</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css\styleDN.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <script src="https://kit.fontawesome.com/d70c1f6414.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css\trans.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <h1 class="Heading1">Nurse Registration</h1>
+    <div class="navigation">
+        <ul>
+            <li class="list">
+                <b></b>
+                <b></b>
+                <a href="addPatient1.html">
+                    <span class="icon"><i class="fa fa-light fa-hospital-user"></i></span>
+                    <span class="title">Patient Registration</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="addDoctor.html">
+                    <b></b>
+                    <b></b>
+                    <span class="icon"><i class=" fa fa-light fa-user-doctor"></i></span>
+                    <span class="title">Doctor Registration</span>
+                </a>
+            </li>
+            <li class="list active">
+                <a href="addNurse.html">
+                    <b></b>
+                    <b></b>
+                    <span class="icon"><i class="fa fa-light fa-user-nurse"></i></span>
+                    <span class="title">Nurse Registration</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <b></b>
+                    <b></b>
+                    <span class="icon"><i class="bi bi-clipboard2-pulse-fill"></i></i></span>
+                    <span class="title">Patient Data</span>
+                </a>
+            </li>
+            <li class="list ">
+                <a href="#">
+                    <b></b>
+                    <b></b>
+                    <span class="icon"><i class="bi bi-clipboard2-plus-fill"></i></span>
+                    <span class="title">Doctor Data</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <b></b>
+                    <b></b>
+                    <span class="icon"><i class="fa fa-light fa-notes-medical"></i></span>
+                    <span class="title">Nurse Data</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <b></b>
+                    <b></b>
+                    <span class="icon"><i class="fa fa-light fa-calendar-check"></i></span>
+                    <span class="title">Appointment</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="#">
+                    <b></b>
+                    <b></b>
+                    <span class="icon"><i class="fa fa-light fa-house-medical-circle-check"></i></span>
+                    <span class="title">Appointment Data</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="BedAvailability.html">
+                    <b></b>
+                    <b></b>
+                    <span class="icon"><i class="fa fa-light fa-bed-pulse"></i></span>
+                    <span class="title">Bed Availability</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="toggle">
+        <i class=" open fa fa-solid fa-bars"></i>
+        <i class="close fa-solid fa-xmark"></i>
+    </div>
+
+
+    <div class="form">
+        <label class="custom-field one Name">
+            <input type="text" name="name" placeholder=" " />
+            <span class="placeholder1">Name</span>
+        </label>
+
+        <label class="custom-field two form-label Age">
+            <input type="number" id="typeNumber" placeholder=" " name="age" />
+            <span class="placeholder1">Age</span>
+        </label>
+
+        <label class="custom-field three Street">
+            <input type="text" placeholder=" " name="street" />
+            <span class="placeholder1">Street</span>
+        </label>
+
+        <label class="custom-field four Area">
+            <input type="text" placeholder=" " name="area" />
+            <span class="placeholder1">Area</span>
+        </label>
+
+        <label class="custom-field three District">
+            <input type="text" placeholder=" " name="district" />
+            <span class="placeholder1">District</span>
+        </label>
+
+        <label class="custom-field four Country">
+            <input type="text" placeholder=" " name="country" />
+            <span class="placeholder1">Country</span>
+        </label>
+
+        <label class="custom-field three Nationality">
+            <input type="text" placeholder=" " name="nationality" />
+            <span class="placeholder1">Nationality</span>
+        </label>
+
+        <label class="custom-field four Phno">
+            <input type="number" placeholder=" " name="phno" />
+            <span class="placeholder1">Phno</span>
+        </label>
+
+        <div>
+            <label class="custom-field DOB six">
+                <input class="placeholder1" id="date-text" type="datetime-local" placeholder="Date of Birth"
+                    name="dob" />
+            </label>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script>
+            flatpickr("input[type=datetime-local]", {});
+        </script>
+
+        <div>
+            <label class="custom-field DOJ six">
+                <input class="placeholder1" id="date-text" type="datetime-local" placeholder="Date of joining"
+                    name="doj" />
+            </label>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script>
+            flatpickr("input[type=datetime-local]", {});
+        </script>
+
+        <label class="custom-field three ward">
+            <input type="text" placeholder=" " name="ward" />
+            <span class="placeholder1">Ward</span>
+        </label>
+
+        <label class="custom-field four room">
+            <input type="text" placeholder=" " name="room" />
+            <span class="placeholder1">Room</span>
+        </label>
+    <input id="subbutton" type="submit" class="subposi" value="Submit" />
+    <input id="subbutton" type="reset" class="resetposi" value="Reset" />
+</div>
+</form>
+    <script>
+        let menuToggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        menuToggle.onclick = function () {
+          menuToggle.classList.toggle('active');
+          navigation.classList.toggle('active');
+        }
+    
+        let list = document.querySelectorAll('.list')
+        for (let i = 0; i < list.length; i++) {
+          list[i].onclick = function () {
+            let j = 0;
+            while (j < list.length) {
+              list[j++].className = 'list';
+            }
+            list[i].className = 'list active';
+          }
+        }
+      </script>
+      <script src="https://kit.fontawesome.com/d70c1f6414.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

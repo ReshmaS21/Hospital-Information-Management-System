@@ -1,0 +1,1417 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Bed Facility</title>
+  <link rel="canonical" href="https://www.creative-tim.com/product/fresh-bootstrap-table" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="css\bedavailability.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/bootstrap-table/dist/bootstrap-table.min.js"></script>
+  <link rel="stylesheet" href="css\trans.css">
+  <link rel="stylesheet" type="text/css" href="css\popupstyle.css">
+</head>
+
+<style>
+  .btn.room.btn-outline-primary {
+    border-color: #1a57aa;
+    color: #1a57aa;
+    margin-right: 5px;
+
+  }
+
+  .btn.four.room.btn-outline-primary {
+    padding-left: 7px;
+  }
+
+  .btn.three.room.btn-outline-primary {
+    padding-left: 12px;
+  }
+
+  .btn.room.btn-outline-primary:focus {
+    border-color: #1a57aa;
+    color: #f2f2f2;
+    background-color: #1a57aa;
+  }
+
+  .btn.room.btn-outline-primary:hover {
+    border-color: #1a57aa;
+    color: #f2f2f2;
+    background-color: #1a57aa;
+  }
+
+  .navigation ul li a .icon {
+    position: relative;
+    top: 3px;
+    font-size: medium;
+  }
+</style>
+
+<body>
+      <div class="navigation">
+        <ul>
+          <li class="list">
+            <b></b>
+            <b></b>
+            <a href="addPatient1.html">
+              <span class="icon"><i class="fa  fa-light fa-hospital-user"></i></span>
+              <span class="title">Patient Registration</span>
+            </a>
+          </li>
+          <li class="list ">
+            <a href="addDoctor.html">
+              <b></b>
+              <b></b>
+              <span class="icon"><i class=" fa fa-light fa-user-doctor"></i></span>
+              <span class="title">Doctor Registration</span>
+            </a>
+          </li>
+          <li class="list ">
+            <a href="addNurse.html">
+              <b></b>
+              <b></b>
+              <span class="icon"><i class="fa fa-light fa-user-nurse"></i></span>
+              <span class="title">Nurse Registration</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              <b></b>
+              <b></b>
+              <span class="icon"><i class="bi bi-clipboard2-pulse-fill"></i></i></span>
+              <span class="title">Patient Data</span>
+            </a>
+          </li>
+          <li class="list ">
+            <a href="#">
+              <b></b>
+              <b></b>
+              <span class="icon"><i class="bi bi-clipboard2-plus-fill"></i></span>
+              <span class="title">Doctor Data</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              <b></b>
+              <b></b>
+              <span class="icon"><i class="fa fa-light fa-notes-medical"></i></span>
+              <span class="title">Nurse Data</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              <b></b>
+              <b></b>
+              <span class="icon"><i class="fa fa-light fa-calendar-check"></i></span>
+              <span class="title">Appointment</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#">
+              <b></b>
+              <b></b>
+              <span class="icon"><i class="fa fa-light fa-house-medical-circle-check"></i></span>
+              <span class="title">Appointment Data</span>
+            </a>
+          </li>
+          <li class="list active">
+            <a href="BedAvailability.html">
+              <b></b>
+              <b></b>
+              <span class="icon"><i class="fa fa-light fa-bed-pulse"></i></span>
+              <span class="title">Bed Availability</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="toggle">
+        <i class=" open fa fa-solid fa-bars"></i>
+        <i class="close fa-solid fa-xmark"></i>
+      </div>
+
+      <div class="wrapper">
+        <!--   Creative Tim Branding   -->
+
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+
+
+              <div class="fresh-table full-color-blue">
+
+
+                <table id="fresh-table" class="table">
+                  <thead>
+                    <th data-field="id">S.no</th>
+                    <th data-field="Wards" data-sortable="true" class="ward-head">Wards</th>
+                    <th data-field="salary" data-sortable="true">Rooms</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Casuality(GF) - 100</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                        <button type="button" class="btn room btn-outline-primary">9</button>
+                        <button type="button" class="btn room btn-outline-primary">10</button>
+                        <button type="button" class="btn room btn-outline-primary">11</button>
+                        <button type="button" class="btn room btn-outline-primary">12</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>2</td>
+                      <td>Casuality Ward (GF) - 006</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                        <button type="button" class="btn room btn-outline-primary">9</button>
+                        <button type="button" class="btn room btn-outline-primary">10</button>
+                        <button type="button" class="btn room btn-outline-primary">11</button>
+                        <button type="button" class="btn room btn-outline-primary">12</button>
+                        <button type="button" class="btn room btn-outline-primary">13</button>
+                        <button type="button" class="btn room btn-outline-primary">14</button>
+                        <button type="button" class="btn room btn-outline-primary">15</button>
+                        <button type="button" class="btn room btn-outline-primary">16</button>
+                        <button type="button" class="btn room btn-outline-primary">17</button>
+                        <button type="button" class="btn room btn-outline-primary">18</button>
+                        <button type="button" class="btn room btn-outline-primary">19</button>
+                        <button type="button" class="btn room btn-outline-primary">20</button>
+                        <button type="button" class="btn room btn-outline-primary">21</button>
+                        <button type="button" class="btn room btn-outline-primary">22</button>
+                        <button type="button" class="btn room btn-outline-primary">23</button>
+                        <button type="button" class="btn room btn-outline-primary">24</button>
+                        <button type="button" class="btn room btn-outline-primary">25</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>3</td>
+                      <td>Deaddiction(SF) - 206</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                        <button type="button" class="btn room btn-outline-primary">9</button>
+                        <button type="button" class="btn room btn-outline-primary">10</button>
+                        <button type="button" class="btn room btn-outline-primary">11</button>
+                        <button type="button" class="btn room btn-outline-primary">12</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>4</td>
+                      <td>Dermatology Female(FF) - 110</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>5</td>
+                      <td>Dermatology Male(FF) - 111</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                        <button type="button" class="btn room btn-outline-primary">9</button>
+                        <button type="button" class="btn room btn-outline-primary">10</button>
+                        <button type="button" class="btn room btn-outline-primary">11</button>
+                        <button type="button" class="btn room btn-outline-primary">12</button>
+                        <button type="button" class="btn room btn-outline-primary">13</button>
+                        <button type="button" class="btn room btn-outline-primary">14</button>
+                        <button type="button" class="btn room btn-outline-primary">15</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>6</td>
+                      <td>ENT Female(SF) - 207</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">9</button>
+                        <button type="button" class="btn room btn-outline-primary">10</button>
+                        <button type="button" class="btn room btn-outline-primary">11</button>
+                        <button type="button" class="btn room btn-outline-primary">12</button>
+                        <button type="button" class="btn room btn-outline-primary">13</button>
+                        <button type="button" class="btn room btn-outline-primary">14</button>
+                        <button type="button" class="btn room btn-outline-primary">15</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>7</td>
+                      <td>ENT Male(SF) - 207</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>8</td>
+                      <td>General Medicine Male(TF)</td>
+                      <td>
+                        <button type="button" class="btn three room btn-outline-primary">101</button>
+                        <button type="button" class="btn three room btn-outline-primary">102</button>
+                        <button type="button" class="btn three room btn-outline-primary">103</button>
+                        <button type="button" class="btn three room btn-outline-primary">104</button>
+                        <button type="button" class="btn three room btn-outline-primary">105</button>
+                        <button type="button" class="btn three room btn-outline-primary">106</button>
+                        <button type="button" class="btn three room btn-outline-primary">107</button>
+                        <button type="button" class="btn three room btn-outline-primary">108</button>
+                        <button type="button" class="btn three room btn-outline-primary">109</button>
+                        <button type="button" class="btn three room btn-outline-primary">110</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>9</td>
+                      <td>Gye Room 1124</td>
+                      <td>
+                        <button type="button" class="btn four room btn-outline-primary">1028</button>
+                        <button type="button" class="btn four room btn-outline-primary">1029</button>
+                        <button type="button" class="btn four room btn-outline-primary">1030</button>
+                        <button type="button" class="btn four room btn-outline-primary">1031</button>
+                        <button type="button" class="btn four room btn-outline-primary">1032</button>
+                        <button type="button" class="btn four room btn-outline-primary">1033</button>
+                        <button type="button" class="btn four room btn-outline-primary">1034</button>
+                        <button type="button" class="btn four room btn-outline-primary">1035</button>
+                        <button type="button" class="btn four room btn-outline-primary">1036</button>
+                        <button type="button" class="btn four room btn-outline-primary">1037</button>
+                        <button type="button" class="btn four room btn-outline-primary">1038</button>
+                        <button type="button" class="btn four room btn-outline-primary">1039</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>10</td>
+                      <td>Gynecology (FF) - 101</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                        <button type="button" class="btn room btn-outline-primary">9</button>
+                        <button type="button" class="btn room btn-outline-primary">10</button>
+                        <button type="button" class="btn room btn-outline-primary">11</button>
+                        <button type="button" class="btn room btn-outline-primary">12</button>
+                        <button type="button" class="btn room btn-outline-primary">13</button>
+                        <button type="button" class="btn room btn-outline-primary">14</button>
+                        <button type="button" class="btn room btn-outline-primary">15</button>
+                        <button type="button" class="btn room btn-outline-primary">16</button>
+                        <button type="button" class="btn room btn-outline-primary">17</button>
+                        <button type="button" class="btn room btn-outline-primary">18</button>
+                        <button type="button" class="btn room btn-outline-primary">19</button>
+                        <button type="button" class="btn room btn-outline-primary">20</button>
+                        <button type="button" class="btn room btn-outline-primary">21</button>
+                        <button type="button" class="btn room btn-outline-primary">22</button>
+                        <button type="button" class="btn room btn-outline-primary">23</button>
+                        <button type="button" class="btn room btn-outline-primary">24</button>
+                        <button type="button" class="btn room btn-outline-primary">25</button>
+                        <button type="button" class="btn room btn-outline-primary">26</button>
+                        <button type="button" class="btn room btn-outline-primary">27</button>
+                        <button type="button" class="btn room btn-outline-primary">28</button>
+                        <button type="button" class="btn room btn-outline-primary">29</button>
+                        <button type="button" class="btn room btn-outline-primary">30</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>11</td>
+                      <td>HDU (FF) - 108</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>12</td>
+                      <td>ICU (FF) - 108</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>13</td>
+                      <td>IMCU (FF) - 108</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>14</td>
+                      <td>Labour Ward (FF) - 006</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>15</td>
+                      <td>Medicine Female IV (TF) - 304</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">91</button>
+                        <button type="button" class="btn room btn-outline-primary">92</button>
+                        <button type="button" class="btn room btn-outline-primary">93</button>
+                        <button type="button" class="btn room btn-outline-primary">94</button>
+                        <button type="button" class="btn room btn-outline-primary">95</button>
+                        <button type="button" class="btn room btn-outline-primary">96</button>
+                        <button type="button" class="btn room btn-outline-primary">97</button>
+                        <button type="button" class="btn room btn-outline-primary">98</button>
+                        <button type="button" class="btn room btn-outline-primary">99</button>
+                        <button type="button" class="btn three room btn-outline-primary">100</button>
+                        <button type="button" class="btn three room btn-outline-primary">101</button>
+                        <button type="button" class="btn three room btn-outline-primary">102</button>
+                        <button type="button" class="btn three room btn-outline-primary">103</button>
+                        <button type="button" class="btn three room btn-outline-primary">104</button>
+                        <button type="button" class="btn three room btn-outline-primary">105</button>
+                        <button type="button" class="btn three room btn-outline-primary">106</button>
+                        <button type="button" class="btn three room btn-outline-primary">107</button>
+                        <button type="button" class="btn three room btn-outline-primary">108</button>
+                        <button type="button" class="btn three room btn-outline-primary">109</button>
+                        <button type="button" class="btn three room btn-outline-primary">110</button>
+                        <button type="button" class="btn three room btn-outline-primary">111</button>
+                        <button type="button" class="btn three room btn-outline-primary">112</button>
+                        <button type="button" class="btn three room btn-outline-primary">113</button>
+                        <button type="button" class="btn three room btn-outline-primary">114</button>
+                        <button type="button" class="btn three room btn-outline-primary">115</button>
+                        <button type="button" class="btn three room btn-outline-primary">116</button>
+                        <button type="button" class="btn three room btn-outline-primary">117</button>
+                        <button type="button" class="btn three room btn-outline-primary">118</button>
+                        <button type="button" class="btn three room btn-outline-primary">119</button>
+                        <button type="button" class="btn three room btn-outline-primary">120</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>16</td>
+                      <td>Medicine Female V (TF) - 305</td>
+                      <td>
+                        <button type="button" class="btn three room btn-outline-primary">121</button>
+                        <button type="button" class="btn three room btn-outline-primary">122</button>
+                        <button type="button" class="btn three room btn-outline-primary">123</button>
+                        <button type="button" class="btn three room btn-outline-primary">124</button>
+                        <button type="button" class="btn three room btn-outline-primary">125</button>
+                        <button type="button" class="btn three room btn-outline-primary">126</button>
+                        <button type="button" class="btn three room btn-outline-primary">127</button>
+                        <button type="button" class="btn three room btn-outline-primary">128</button>
+                        <button type="button" class="btn three room btn-outline-primary">129</button>
+                        <button type="button" class="btn three room btn-outline-primary">130</button>
+                        <button type="button" class="btn three room btn-outline-primary">131</button>
+                        <button type="button" class="btn three room btn-outline-primary">132</button>
+                        <button type="button" class="btn three room btn-outline-primary">133</button>
+                        <button type="button" class="btn three room btn-outline-primary">134</button>
+                        <button type="button" class="btn three room btn-outline-primary">135</button>
+                        <button type="button" class="btn three room btn-outline-primary">136</button>
+                        <button type="button" class="btn three room btn-outline-primary">137</button>
+                        <button type="button" class="btn three room btn-outline-primary">138</button>
+                        <button type="button" class="btn three room btn-outline-primary">139</button>
+                        <button type="button" class="btn three room btn-outline-primary">140</button>
+                        <button type="button" class="btn three room btn-outline-primary">141</button>
+                        <button type="button" class="btn three room btn-outline-primary">142</button>
+                        <button type="button" class="btn three room btn-outline-primary">143</button>
+                        <button type="button" class="btn three room btn-outline-primary">144</button>
+                        <button type="button" class="btn three room btn-outline-primary">145</button>
+                        <button type="button" class="btn three room btn-outline-primary">146</button>
+                        <button type="button" class="btn three room btn-outline-primary">147</button>
+                        <button type="button" class="btn three room btn-outline-primary">148</button>
+                        <button type="button" class="btn three room btn-outline-primary">149</button>
+                        <button type="button" class="btn three room btn-outline-primary">150</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>17</td>
+                      <td>Medicine Male I (TF) - 301</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                        <button type="button" class="btn room btn-outline-primary">9</button>
+                        <button type="button" class="btn room btn-outline-primary">10</button>
+                        <button type="button" class="btn room btn-outline-primary">11</button>
+                        <button type="button" class="btn room btn-outline-primary">12</button>
+                        <button type="button" class="btn room btn-outline-primary">13</button>
+                        <button type="button" class="btn room btn-outline-primary">14</button>
+                        <button type="button" class="btn room btn-outline-primary">15</button>
+                        <button type="button" class="btn room btn-outline-primary">16</button>
+                        <button type="button" class="btn room btn-outline-primary">17</button>
+                        <button type="button" class="btn room btn-outline-primary">18</button>
+                        <button type="button" class="btn room btn-outline-primary">19</button>
+                        <button type="button" class="btn room btn-outline-primary">20</button>
+                        <button type="button" class="btn room btn-outline-primary">21</button>
+                        <button type="button" class="btn room btn-outline-primary">22</button>
+                        <button type="button" class="btn room btn-outline-primary">23</button>
+                        <button type="button" class="btn room btn-outline-primary">24</button>
+                        <button type="button" class="btn room btn-outline-primary">25</button>
+                        <button type="button" class="btn room btn-outline-primary">26</button>
+                        <button type="button" class="btn room btn-outline-primary">27</button>
+                        <button type="button" class="btn room btn-outline-primary">28</button>
+                        <button type="button" class="btn room btn-outline-primary">29</button>
+                        <button type="button" class="btn room btn-outline-primary">30</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>18</td>
+                      <td>Medicine Male II (TF) - 302</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">31</button>
+                        <button type="button" class="btn room btn-outline-primary">32</button>
+                        <button type="button" class="btn room btn-outline-primary">33</button>
+                        <button type="button" class="btn room btn-outline-primary">34</button>
+                        <button type="button" class="btn room btn-outline-primary">35</button>
+                        <button type="button" class="btn room btn-outline-primary">36</button>
+                        <button type="button" class="btn room btn-outline-primary">37</button>
+                        <button type="button" class="btn room btn-outline-primary">38</button>
+                        <button type="button" class="btn room btn-outline-primary">39</button>
+                        <button type="button" class="btn room btn-outline-primary">40</button>
+                        <button type="button" class="btn room btn-outline-primary">41</button>
+                        <button type="button" class="btn room btn-outline-primary">42</button>
+                        <button type="button" class="btn room btn-outline-primary">43</button>
+                        <button type="button" class="btn room btn-outline-primary">44</button>
+                        <button type="button" class="btn room btn-outline-primary">45</button>
+                        <button type="button" class="btn room btn-outline-primary">46</button>
+                        <button type="button" class="btn room btn-outline-primary">47</button>
+                        <button type="button" class="btn room btn-outline-primary">48</button>
+                        <button type="button" class="btn room btn-outline-primary">49</button>
+                        <button type="button" class="btn room btn-outline-primary">50</button>
+                        <button type="button" class="btn room btn-outline-primary">51</button>
+                        <button type="button" class="btn room btn-outline-primary">52</button>
+                        <button type="button" class="btn room btn-outline-primary">53</button>
+                        <button type="button" class="btn room btn-outline-primary">54</button>
+                        <button type="button" class="btn room btn-outline-primary">55</button>
+                        <button type="button" class="btn room btn-outline-primary">56</button>
+                        <button type="button" class="btn room btn-outline-primary">57</button>
+                        <button type="button" class="btn room btn-outline-primary">58</button>
+                        <button type="button" class="btn room btn-outline-primary">59</button>
+                        <button type="button" class="btn room btn-outline-primary">60</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>19</td>
+                      <td>Medicine Male III (TF) - 303</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">61</button>
+                        <button type="button" class="btn room btn-outline-primary">62</button>
+                        <button type="button" class="btn room btn-outline-primary">63</button>
+                        <button type="button" class="btn room btn-outline-primary">64</button>
+                        <button type="button" class="btn room btn-outline-primary">65</button>
+                        <button type="button" class="btn room btn-outline-primary">66</button>
+                        <button type="button" class="btn room btn-outline-primary">67</button>
+                        <button type="button" class="btn room btn-outline-primary">68</button>
+                        <button type="button" class="btn room btn-outline-primary">69</button>
+                        <button type="button" class="btn room btn-outline-primary">70</button>
+                        <button type="button" class="btn room btn-outline-primary">71</button>
+                        <button type="button" class="btn room btn-outline-primary">72</button>
+                        <button type="button" class="btn room btn-outline-primary">73</button>
+                        <button type="button" class="btn room btn-outline-primary">74</button>
+                        <button type="button" class="btn room btn-outline-primary">75</button>
+                        <button type="button" class="btn room btn-outline-primary">76</button>
+                        <button type="button" class="btn room btn-outline-primary">77</button>
+                        <button type="button" class="btn room btn-outline-primary">78</button>
+                        <button type="button" class="btn room btn-outline-primary">79</button>
+                        <button type="button" class="btn room btn-outline-primary">80</button>
+                        <button type="button" class="btn room btn-outline-primary">81</button>
+                        <button type="button" class="btn room btn-outline-primary">82</button>
+                        <button type="button" class="btn room btn-outline-primary">83</button>
+                        <button type="button" class="btn room btn-outline-primary">84</button>
+                        <button type="button" class="btn room btn-outline-primary">85</button>
+                        <button type="button" class="btn room btn-outline-primary">86</button>
+                        <button type="button" class="btn room btn-outline-primary">87</button>
+                        <button type="button" class="btn room btn-outline-primary">88</button>
+                        <button type="button" class="btn room btn-outline-primary">89</button>
+                        <button type="button" class="btn room btn-outline-primary">90</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>20</td>
+                      <td>NICU (FF) - 102A</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>21</td>
+                      <td>Obstetrics I (FF) - 105</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                        <button type="button" class="btn room btn-outline-primary">9</button>
+                        <button type="button" class="btn room btn-outline-primary">10</button>
+                        <button type="button" class="btn room btn-outline-primary">11</button>
+                        <button type="button" class="btn room btn-outline-primary">12</button>
+                        <button type="button" class="btn room btn-outline-primary">13</button>
+                        <button type="button" class="btn room btn-outline-primary">14</button>
+                        <button type="button" class="btn room btn-outline-primary">15</button>
+                        <button type="button" class="btn room btn-outline-primary">16</button>
+                        <button type="button" class="btn room btn-outline-primary">17</button>
+                        <button type="button" class="btn room btn-outline-primary">18</button>
+                        <button type="button" class="btn room btn-outline-primary">19</button>
+                        <button type="button" class="btn room btn-outline-primary">20</button>
+                        <button type="button" class="btn room btn-outline-primary">21</button>
+                        <button type="button" class="btn room btn-outline-primary">22</button>
+                        <button type="button" class="btn room btn-outline-primary">23</button>
+                        <button type="button" class="btn room btn-outline-primary">24</button>
+                        <button type="button" class="btn room btn-outline-primary">25</button>
+                        <button type="button" class="btn room btn-outline-primary">26</button>
+                        <button type="button" class="btn room btn-outline-primary">27</button>
+                        <button type="button" class="btn room btn-outline-primary">28</button>
+                        <button type="button" class="btn room btn-outline-primary">29</button>
+                        <button type="button" class="btn room btn-outline-primary">30</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>22</td>
+                      <td>Obstetrics II (FF) - 106</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">31</button>
+                        <button type="button" class="btn room btn-outline-primary">32</button>
+                        <button type="button" class="btn room btn-outline-primary">33</button>
+                        <button type="button" class="btn room btn-outline-primary">34</button>
+                        <button type="button" class="btn room btn-outline-primary">35</button>
+                        <button type="button" class="btn room btn-outline-primary">36</button>
+                        <button type="button" class="btn room btn-outline-primary">37</button>
+                        <button type="button" class="btn room btn-outline-primary">38</button>
+                        <button type="button" class="btn room btn-outline-primary">39</button>
+                        <button type="button" class="btn room btn-outline-primary">40</button>
+                        <button type="button" class="btn room btn-outline-primary">41</button>
+                        <button type="button" class="btn room btn-outline-primary">42</button>
+                        <button type="button" class="btn room btn-outline-primary">43</button>
+                        <button type="button" class="btn room btn-outline-primary">44</button>
+                        <button type="button" class="btn room btn-outline-primary">45</button>
+                        <button type="button" class="btn room btn-outline-primary">46</button>
+                        <button type="button" class="btn room btn-outline-primary">47</button>
+                        <button type="button" class="btn room btn-outline-primary">48</button>
+                        <button type="button" class="btn room btn-outline-primary">49</button>
+                        <button type="button" class="btn room btn-outline-primary">50</button>
+                        <button type="button" class="btn room btn-outline-primary">51</button>
+                        <button type="button" class="btn room btn-outline-primary">52</button>
+                        <button type="button" class="btn room btn-outline-primary">53</button>
+                        <button type="button" class="btn room btn-outline-primary">54</button>
+                        <button type="button" class="btn room btn-outline-primary">55</button>
+                        <button type="button" class="btn room btn-outline-primary">56</button>
+                        <button type="button" class="btn room btn-outline-primary">57</button>
+                        <button type="button" class="btn room btn-outline-primary">58</button>
+                        <button type="button" class="btn room btn-outline-primary">59</button>
+                        <button type="button" class="btn room btn-outline-primary">60</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>23</td>
+                      <td>Ophthalmology Female (TF) - 306</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">9</button>
+                        <button type="button" class="btn room btn-outline-primary">10</button>
+                        <button type="button" class="btn room btn-outline-primary">11</button>
+                        <button type="button" class="btn room btn-outline-primary">12</button>
+                        <button type="button" class="btn room btn-outline-primary">13</button>
+                        <button type="button" class="btn room btn-outline-primary">14</button>
+                        <button type="button" class="btn room btn-outline-primary">15</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>24</td>
+                      <td>Ophthalmology Male (TF) - 306</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>25</td>
+                      <td>Orthopaedics Female II (SF) - 209</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">31</button>
+                        <button type="button" class="btn room btn-outline-primary">32</button>
+                        <button type="button" class="btn room btn-outline-primary">33</button>
+                        <button type="button" class="btn room btn-outline-primary">34</button>
+                        <button type="button" class="btn room btn-outline-primary">35</button>
+                        <button type="button" class="btn room btn-outline-primary">36</button>
+                        <button type="button" class="btn room btn-outline-primary">37</button>
+                        <button type="button" class="btn room btn-outline-primary">38</button>
+                        <button type="button" class="btn room btn-outline-primary">39</button>
+                        <button type="button" class="btn room btn-outline-primary">40</button>
+                        <button type="button" class="btn room btn-outline-primary">41</button>
+                        <button type="button" class="btn room btn-outline-primary">42</button>
+                        <button type="button" class="btn room btn-outline-primary">43</button>
+                        <button type="button" class="btn room btn-outline-primary">44</button>
+                        <button type="button" class="btn room btn-outline-primary">45</button>
+                        <button type="button" class="btn room btn-outline-primary">46</button>
+                        <button type="button" class="btn room btn-outline-primary">47</button>
+                        <button type="button" class="btn room btn-outline-primary">48</button>
+                        <button type="button" class="btn room btn-outline-primary">49</button>
+                        <button type="button" class="btn room btn-outline-primary">50</button>
+                        <button type="button" class="btn room btn-outline-primary">51</button>
+                        <button type="button" class="btn room btn-outline-primary">52</button>
+                        <button type="button" class="btn room btn-outline-primary">53</button>
+                        <button type="button" class="btn room btn-outline-primary">54</button>
+                        <button type="button" class="btn room btn-outline-primary">55</button>
+                        <button type="button" class="btn room btn-outline-primary">56</button>
+                        <button type="button" class="btn room btn-outline-primary">57</button>
+                        <button type="button" class="btn room btn-outline-primary">58</button>
+                        <button type="button" class="btn room btn-outline-primary">59</button>
+                        <button type="button" class="btn room btn-outline-primary">60</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>26</td>
+                      <td>Orthopaedics Female II (SF) - 211</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">81</button>
+                        <button type="button" class="btn room btn-outline-primary">82</button>
+                        <button type="button" class="btn room btn-outline-primary">83</button>
+                        <button type="button" class="btn room btn-outline-primary">84</button>
+                        <button type="button" class="btn room btn-outline-primary">85</button>
+                        <button type="button" class="btn room btn-outline-primary">86</button>
+                        <button type="button" class="btn room btn-outline-primary">87</button>
+                        <button type="button" class="btn room btn-outline-primary">88</button>
+                        <button type="button" class="btn room btn-outline-primary">89</button>
+                        <button type="button" class="btn room btn-outline-primary">90</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>27</td>
+                      <td>Orthopaedics Male I (SF) - 208</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                        <button type="button" class="btn room btn-outline-primary">9</button>
+                        <button type="button" class="btn room btn-outline-primary">10</button>
+                        <button type="button" class="btn room btn-outline-primary">11</button>
+                        <button type="button" class="btn room btn-outline-primary">12</button>
+                        <button type="button" class="btn room btn-outline-primary">13</button>
+                        <button type="button" class="btn room btn-outline-primary">14</button>
+                        <button type="button" class="btn room btn-outline-primary">15</button>
+                        <button type="button" class="btn room btn-outline-primary">16</button>
+                        <button type="button" class="btn room btn-outline-primary">17</button>
+                        <button type="button" class="btn room btn-outline-primary">18</button>
+                        <button type="button" class="btn room btn-outline-primary">19</button>
+                        <button type="button" class="btn room btn-outline-primary">20</button>
+                        <button type="button" class="btn room btn-outline-primary">21</button>
+                        <button type="button" class="btn room btn-outline-primary">22</button>
+                        <button type="button" class="btn room btn-outline-primary">23</button>
+                        <button type="button" class="btn room btn-outline-primary">24</button>
+                        <button type="button" class="btn room btn-outline-primary">25</button>
+                        <button type="button" class="btn room btn-outline-primary">26</button>
+                        <button type="button" class="btn room btn-outline-primary">27</button>
+                        <button type="button" class="btn room btn-outline-primary">28</button>
+                        <button type="button" class="btn room btn-outline-primary">29</button>
+                        <button type="button" class="btn room btn-outline-primary">30</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>28</td>
+                      <td>Orthopaedics Male III (SF) - 210</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">61</button>
+                        <button type="button" class="btn room btn-outline-primary">62</button>
+                        <button type="button" class="btn room btn-outline-primary">63</button>
+                        <button type="button" class="btn room btn-outline-primary">64</button>
+                        <button type="button" class="btn room btn-outline-primary">65</button>
+                        <button type="button" class="btn room btn-outline-primary">66</button>
+                        <button type="button" class="btn room btn-outline-primary">67</button>
+                        <button type="button" class="btn room btn-outline-primary">68</button>
+                        <button type="button" class="btn room btn-outline-primary">69</button>
+                        <button type="button" class="btn room btn-outline-primary">70</button>
+                        <button type="button" class="btn room btn-outline-primary">71</button>
+                        <button type="button" class="btn room btn-outline-primary">72</button>
+                        <button type="button" class="btn room btn-outline-primary">73</button>
+                        <button type="button" class="btn room btn-outline-primary">74</button>
+                        <button type="button" class="btn room btn-outline-primary">75</button>
+                        <button type="button" class="btn room btn-outline-primary">76</button>
+                        <button type="button" class="btn room btn-outline-primary">77</button>
+                        <button type="button" class="btn room btn-outline-primary">78</button>
+                        <button type="button" class="btn room btn-outline-primary">79</button>
+                        <button type="button" class="btn room btn-outline-primary">80</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>29</td>
+                      <td>Pediatrics I (FF)-102</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                        <button type="button" class="btn room btn-outline-primary">9</button>
+                        <button type="button" class="btn room btn-outline-primary">10</button>
+                        <button type="button" class="btn room btn-outline-primary">11</button>
+                        <button type="button" class="btn room btn-outline-primary">12</button>
+                        <button type="button" class="btn room btn-outline-primary">13</button>
+                        <button type="button" class="btn room btn-outline-primary">14</button>
+                        <button type="button" class="btn room btn-outline-primary">15</button>
+                        <button type="button" class="btn room btn-outline-primary">16</button>
+                        <button type="button" class="btn room btn-outline-primary">17</button>
+                        <button type="button" class="btn room btn-outline-primary">18</button>
+                        <button type="button" class="btn room btn-outline-primary">19</button>
+                        <button type="button" class="btn room btn-outline-primary">20</button>
+                        <button type="button" class="btn room btn-outline-primary">21</button>
+                        <button type="button" class="btn room btn-outline-primary">22</button>
+                        <button type="button" class="btn room btn-outline-primary">23</button>
+                        <button type="button" class="btn room btn-outline-primary">24</button>
+                        <button type="button" class="btn room btn-outline-primary">25</button>
+                        <button type="button" class="btn room btn-outline-primary">26</button>
+                        <button type="button" class="btn room btn-outline-primary">27</button>
+                        <button type="button" class="btn room btn-outline-primary">28</button>
+                        <button type="button" class="btn room btn-outline-primary">29</button>
+                        <button type="button" class="btn room btn-outline-primary">30</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>30</td>
+                      <td>Pediatrics II (FF) - 103</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">31</button>
+                        <button type="button" class="btn room btn-outline-primary">32</button>
+                        <button type="button" class="btn room btn-outline-primary">33</button>
+                        <button type="button" class="btn room btn-outline-primary">34</button>
+                        <button type="button" class="btn room btn-outline-primary">35</button>
+                        <button type="button" class="btn room btn-outline-primary">36</button>
+                        <button type="button" class="btn room btn-outline-primary">37</button>
+                        <button type="button" class="btn room btn-outline-primary">38</button>
+                        <button type="button" class="btn room btn-outline-primary">39</button>
+                        <button type="button" class="btn room btn-outline-primary">40</button>
+                        <button type="button" class="btn room btn-outline-primary">41</button>
+                        <button type="button" class="btn room btn-outline-primary">42</button>
+                        <button type="button" class="btn room btn-outline-primary">43</button>
+                        <button type="button" class="btn room btn-outline-primary">44</button>
+                        <button type="button" class="btn room btn-outline-primary">45</button>
+                        <button type="button" class="btn room btn-outline-primary">46</button>
+                        <button type="button" class="btn room btn-outline-primary">47</button>
+                        <button type="button" class="btn room btn-outline-primary">48</button>
+                        <button type="button" class="btn room btn-outline-primary">49</button>
+                        <button type="button" class="btn room btn-outline-primary">50</button>
+                        <button type="button" class="btn room btn-outline-primary">51</button>
+                        <button type="button" class="btn room btn-outline-primary">52</button>
+                        <button type="button" class="btn room btn-outline-primary">53</button>
+                        <button type="button" class="btn room btn-outline-primary">54</button>
+                        <button type="button" class="btn room btn-outline-primary">55</button>
+                        <button type="button" class="btn room btn-outline-primary">56</button>
+                        <button type="button" class="btn room btn-outline-primary">57</button>
+                        <button type="button" class="btn room btn-outline-primary">58</button>
+                        <button type="button" class="btn room btn-outline-primary">59</button>
+                        <button type="button" class="btn room btn-outline-primary">60</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>31</td>
+                      <td>Medicine Male III (TF) - 303</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">61</button>
+                        <button type="button" class="btn room btn-outline-primary">62</button>
+                        <button type="button" class="btn room btn-outline-primary">63</button>
+                        <button type="button" class="btn room btn-outline-primary">64</button>
+                        <button type="button" class="btn room btn-outline-primary">65</button>
+                        <button type="button" class="btn room btn-outline-primary">66</button>
+                        <button type="button" class="btn room btn-outline-primary">67</button>
+                        <button type="button" class="btn room btn-outline-primary">68</button>
+                        <button type="button" class="btn room btn-outline-primary">69</button>
+                        <button type="button" class="btn room btn-outline-primary">70</button>
+                        <button type="button" class="btn room btn-outline-primary">71</button>
+                        <button type="button" class="btn room btn-outline-primary">72</button>
+                        <button type="button" class="btn room btn-outline-primary">73</button>
+                        <button type="button" class="btn room btn-outline-primary">74</button>
+                        <button type="button" class="btn room btn-outline-primary">75</button>
+                        <button type="button" class="btn room btn-outline-primary">76</button>
+                        <button type="button" class="btn room btn-outline-primary">77</button>
+                        <button type="button" class="btn room btn-outline-primary">78</button>
+                        <button type="button" class="btn room btn-outline-primary">79</button>
+                        <button type="button" class="btn room btn-outline-primary">80</button>
+                        <button type="button" class="btn room btn-outline-primary">81</button>
+                        <button type="button" class="btn room btn-outline-primary">82</button>
+                        <button type="button" class="btn room btn-outline-primary">83</button>
+                        <button type="button" class="btn room btn-outline-primary">84</button>
+                        <button type="button" class="btn room btn-outline-primary">85</button>
+                        <button type="button" class="btn room btn-outline-primary">86</button>
+                        <button type="button" class="btn room btn-outline-primary">87</button>
+                        <button type="button" class="btn room btn-outline-primary">88</button>
+                        <button type="button" class="btn room btn-outline-primary">89</button>
+                        <button type="button" class="btn room btn-outline-primary">90</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>32</td>
+                      <td>PICU (FF) - 102A</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>33</td>
+                      <td>Post Operative Female (SF) - 214</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                        <button type="button" class="btn room btn-outline-primary">9</button>
+                        <button type="button" class="btn room btn-outline-primary">10</button>
+                        <button type="button" class="btn room btn-outline-primary">11</button>
+                        <button type="button" class="btn room btn-outline-primary">12</button>
+                        <button type="button" class="btn room btn-outline-primary">13</button>
+                        <button type="button" class="btn room btn-outline-primary">14</button>
+                        <button type="button" class="btn room btn-outline-primary">15</button>
+                        <button type="button" class="btn room btn-outline-primary">16</button>
+                        <button type="button" class="btn room btn-outline-primary">17</button>
+                        <button type="button" class="btn room btn-outline-primary">18</button>
+                        <button type="button" class="btn room btn-outline-primary">19</button>
+                        <button type="button" class="btn room btn-outline-primary">20</button>
+                        <button type="button" class="btn room btn-outline-primary">21</button>
+                        <button type="button" class="btn room btn-outline-primary">22</button>
+                        <button type="button" class="btn room btn-outline-primary">23</button>
+                        <button type="button" class="btn room btn-outline-primary">24</button>
+                        <button type="button" class="btn room btn-outline-primary">25</button>
+                        <button type="button" class="btn room btn-outline-primary">26</button>
+                        <button type="button" class="btn room btn-outline-primary">27</button>
+                        <button type="button" class="btn room btn-outline-primary">28</button>
+                        <button type="button" class="btn room btn-outline-primary">29</button>
+                        <button type="button" class="btn room btn-outline-primary">30</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>34</td>
+                      <td>Post Operative Male (SF) - 214</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                        <button type="button" class="btn room btn-outline-primary">9</button>
+                        <button type="button" class="btn room btn-outline-primary">10</button>
+                        <button type="button" class="btn room btn-outline-primary">11</button>
+                        <button type="button" class="btn room btn-outline-primary">12</button>
+                        <button type="button" class="btn room btn-outline-primary">13</button>
+                        <button type="button" class="btn room btn-outline-primary">14</button>
+                        <button type="button" class="btn room btn-outline-primary">15</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>35</td>
+                      <td>Pre Labour Ward (FF) - 005</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                        <button type="button" class="btn room btn-outline-primary">9</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>36</td>
+                      <td>Psychiatry Female (FF) - 109</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">9</button>
+                        <button type="button" class="btn room btn-outline-primary">10</button>
+                        <button type="button" class="btn room btn-outline-primary">11</button>
+                        <button type="button" class="btn room btn-outline-primary">12</button>
+                        <button type="button" class="btn room btn-outline-primary">13</button>
+                        <button type="button" class="btn room btn-outline-primary">14</button>
+                        <button type="button" class="btn room btn-outline-primary">15</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>37</td>
+                      <td>Psychiatry Male (SF) - 206</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                      </td>
+                    </tr>
+
+
+                    <tr>
+                      <td>38</td>
+                      <td>RICU (FF) - 108</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                        <button type="button" class="btn room btn-outline-primary">9</button>
+                        <button type="button" class="btn room btn-outline-primary">10</button>
+                        <button type="button" class="btn room btn-outline-primary">11</button>
+                        <button type="button" class="btn room btn-outline-primary">12</button>
+                        <button type="button" class="btn room btn-outline-primary">13</button>
+                        <button type="button" class="btn room btn-outline-primary">14</button>
+                        <button type="button" class="btn room btn-outline-primary">15</button>
+                        <button type="button" class="btn room btn-outline-primary">16</button>
+                        <button type="button" class="btn room btn-outline-primary">17</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>39</td>
+                      <td>SEP.ICU (FF) - 102A</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>40</td>
+                      <td>SICU (FF) - 108</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                        <button type="button" class="btn room btn-outline-primary">9</button>
+                        <button type="button" class="btn room btn-outline-primary">10</button>
+                        <button type="button" class="btn room btn-outline-primary">11</button>
+                        <button type="button" class="btn room btn-outline-primary">12</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>41</td>
+                      <td>Surgery Female III (SF) - 204</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">91</button>
+                        <button type="button" class="btn room btn-outline-primary">92</button>
+                        <button type="button" class="btn room btn-outline-primary">93</button>
+                        <button type="button" class="btn room btn-outline-primary">94</button>
+                        <button type="button" class="btn room btn-outline-primary">95</button>
+                        <button type="button" class="btn room btn-outline-primary">96</button>
+                        <button type="button" class="btn room btn-outline-primary">97</button>
+                        <button type="button" class="btn room btn-outline-primary">98</button>
+                        <button type="button" class="btn room btn-outline-primary">99</button>
+                        <button type="button" class="btn three room btn-outline-primary">100</button>
+                        <button type="button" class="btn three room btn-outline-primary">101</button>
+                        <button type="button" class="btn three room btn-outline-primary">102</button>
+                        <button type="button" class="btn three room btn-outline-primary">103</button>
+                        <button type="button" class="btn three room btn-outline-primary">104</button>
+                        <button type="button" class="btn three room btn-outline-primary">105</button>
+                        <button type="button" class="btn three room btn-outline-primary">106</button>
+                        <button type="button" class="btn three room btn-outline-primary">107</button>
+                        <button type="button" class="btn three room btn-outline-primary">108</button>
+                        <button type="button" class="btn three room btn-outline-primary">109</button>
+                        <button type="button" class="btn three room btn-outline-primary">110</button>
+                        <button type="button" class="btn three room btn-outline-primary">111</button>
+                        <button type="button" class="btn three room btn-outline-primary">112</button>
+                        <button type="button" class="btn three room btn-outline-primary">113</button>
+                        <button type="button" class="btn three room btn-outline-primary">114</button>
+                        <button type="button" class="btn three room btn-outline-primary">115</button>
+                        <button type="button" class="btn three room btn-outline-primary">116</button>
+                        <button type="button" class="btn three room btn-outline-primary">117</button>
+                        <button type="button" class="btn three room btn-outline-primary">118</button>
+                        <button type="button" class="btn three room btn-outline-primary">119</button>
+                        <button type="button" class="btn three room btn-outline-primary">120</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>42</td>
+                      <td>Surgery Female V (SF) - 205</td>
+                      <td>
+                        <button type="button" class="btn three room btn-outline-primary">121</button>
+                        <button type="button" class="btn three room btn-outline-primary">122</button>
+                        <button type="button" class="btn three room btn-outline-primary">123</button>
+                        <button type="button" class="btn three room btn-outline-primary">124</button>
+                        <button type="button" class="btn three room btn-outline-primary">125</button>
+                        <button type="button" class="btn three room btn-outline-primary">126</button>
+                        <button type="button" class="btn three room btn-outline-primary">127</button>
+                        <button type="button" class="btn three room btn-outline-primary">128</button>
+                        <button type="button" class="btn three room btn-outline-primary">129</button>
+                        <button type="button" class="btn three room btn-outline-primary">130</button>
+                        <button type="button" class="btn three room btn-outline-primary">131</button>
+                        <button type="button" class="btn three room btn-outline-primary">132</button>
+                        <button type="button" class="btn three room btn-outline-primary">133</button>
+                        <button type="button" class="btn three room btn-outline-primary">134</button>
+                        <button type="button" class="btn three room btn-outline-primary">135</button>
+                        <button type="button" class="btn three room btn-outline-primary">136</button>
+                        <button type="button" class="btn three room btn-outline-primary">137</button>
+                        <button type="button" class="btn three room btn-outline-primary">138</button>
+                        <button type="button" class="btn three room btn-outline-primary">139</button>
+                        <button type="button" class="btn three room btn-outline-primary">140</button>
+                        <button type="button" class="btn three room btn-outline-primary">141</button>
+                        <button type="button" class="btn three room btn-outline-primary">142</button>
+                        <button type="button" class="btn three room btn-outline-primary">143</button>
+                        <button type="button" class="btn three room btn-outline-primary">144</button>
+                        <button type="button" class="btn three room btn-outline-primary">145</button>
+                        <button type="button" class="btn three room btn-outline-primary">146</button>
+                        <button type="button" class="btn three room btn-outline-primary">147</button>
+                        <button type="button" class="btn three room btn-outline-primary">148</button>
+                        <button type="button" class="btn three room btn-outline-primary">149</button>
+                        <button type="button" class="btn three room btn-outline-primary">150</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>43</td>
+                      <td>Surgery Male I (SF) - 201</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                        <button type="button" class="btn room btn-outline-primary">9</button>
+                        <button type="button" class="btn room btn-outline-primary">10</button>
+                        <button type="button" class="btn room btn-outline-primary">11</button>
+                        <button type="button" class="btn room btn-outline-primary">12</button>
+                        <button type="button" class="btn room btn-outline-primary">13</button>
+                        <button type="button" class="btn room btn-outline-primary">14</button>
+                        <button type="button" class="btn room btn-outline-primary">15</button>
+                        <button type="button" class="btn room btn-outline-primary">16</button>
+                        <button type="button" class="btn room btn-outline-primary">17</button>
+                        <button type="button" class="btn room btn-outline-primary">18</button>
+                        <button type="button" class="btn room btn-outline-primary">19</button>
+                        <button type="button" class="btn room btn-outline-primary">20</button>
+                        <button type="button" class="btn room btn-outline-primary">21</button>
+                        <button type="button" class="btn room btn-outline-primary">22</button>
+                        <button type="button" class="btn room btn-outline-primary">23</button>
+                        <button type="button" class="btn room btn-outline-primary">24</button>
+                        <button type="button" class="btn room btn-outline-primary">25</button>
+                        <button type="button" class="btn room btn-outline-primary">26</button>
+                        <button type="button" class="btn room btn-outline-primary">27</button>
+                        <button type="button" class="btn room btn-outline-primary">28</button>
+                        <button type="button" class="btn room btn-outline-primary">29</button>
+                        <button type="button" class="btn room btn-outline-primary">30</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>44</td>
+                      <td>Surgery Male II (SF) - 202</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">31</button>
+                        <button type="button" class="btn room btn-outline-primary">32</button>
+                        <button type="button" class="btn room btn-outline-primary">33</button>
+                        <button type="button" class="btn room btn-outline-primary">34</button>
+                        <button type="button" class="btn room btn-outline-primary">35</button>
+                        <button type="button" class="btn room btn-outline-primary">36</button>
+                        <button type="button" class="btn room btn-outline-primary">37</button>
+                        <button type="button" class="btn room btn-outline-primary">38</button>
+                        <button type="button" class="btn room btn-outline-primary">39</button>
+                        <button type="button" class="btn room btn-outline-primary">40</button>
+                        <button type="button" class="btn room btn-outline-primary">41</button>
+                        <button type="button" class="btn room btn-outline-primary">42</button>
+                        <button type="button" class="btn room btn-outline-primary">43</button>
+                        <button type="button" class="btn room btn-outline-primary">44</button>
+                        <button type="button" class="btn room btn-outline-primary">45</button>
+                        <button type="button" class="btn room btn-outline-primary">46</button>
+                        <button type="button" class="btn room btn-outline-primary">47</button>
+                        <button type="button" class="btn room btn-outline-primary">48</button>
+                        <button type="button" class="btn room btn-outline-primary">49</button>
+                        <button type="button" class="btn room btn-outline-primary">50</button>
+                        <button type="button" class="btn room btn-outline-primary">51</button>
+                        <button type="button" class="btn room btn-outline-primary">52</button>
+                        <button type="button" class="btn room btn-outline-primary">53</button>
+                        <button type="button" class="btn room btn-outline-primary">54</button>
+                        <button type="button" class="btn room btn-outline-primary">55</button>
+                        <button type="button" class="btn room btn-outline-primary">56</button>
+                        <button type="button" class="btn room btn-outline-primary">57</button>
+                        <button type="button" class="btn room btn-outline-primary">58</button>
+                        <button type="button" class="btn room btn-outline-primary">59</button>
+                        <button type="button" class="btn room btn-outline-primary">60</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>45</td>
+                      <td>Surgery Male IV (SF) - 203</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">61</button>
+                        <button type="button" class="btn room btn-outline-primary">62</button>
+                        <button type="button" class="btn room btn-outline-primary">63</button>
+                        <button type="button" class="btn room btn-outline-primary">64</button>
+                        <button type="button" class="btn room btn-outline-primary">65</button>
+                        <button type="button" class="btn room btn-outline-primary">66</button>
+                        <button type="button" class="btn room btn-outline-primary">67</button>
+                        <button type="button" class="btn room btn-outline-primary">68</button>
+                        <button type="button" class="btn room btn-outline-primary">69</button>
+                        <button type="button" class="btn room btn-outline-primary">70</button>
+                        <button type="button" class="btn room btn-outline-primary">71</button>
+                        <button type="button" class="btn room btn-outline-primary">72</button>
+                        <button type="button" class="btn room btn-outline-primary">73</button>
+                        <button type="button" class="btn room btn-outline-primary">74</button>
+                        <button type="button" class="btn room btn-outline-primary">75</button>
+                        <button type="button" class="btn room btn-outline-primary">76</button>
+                        <button type="button" class="btn room btn-outline-primary">77</button>
+                        <button type="button" class="btn room btn-outline-primary">78</button>
+                        <button type="button" class="btn room btn-outline-primary">79</button>
+                        <button type="button" class="btn room btn-outline-primary">80</button>
+                        <button type="button" class="btn room btn-outline-primary">81</button>
+                        <button type="button" class="btn room btn-outline-primary">82</button>
+                        <button type="button" class="btn room btn-outline-primary">83</button>
+                        <button type="button" class="btn room btn-outline-primary">84</button>
+                        <button type="button" class="btn room btn-outline-primary">85</button>
+                        <button type="button" class="btn room btn-outline-primary">86</button>
+                        <button type="button" class="btn room btn-outline-primary">87</button>
+                        <button type="button" class="btn room btn-outline-primary">88</button>
+                        <button type="button" class="btn room btn-outline-primary">89</button>
+                        <button type="button" class="btn room btn-outline-primary">90</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>46</td>
+                      <td>Surgery VI (SF) - 212</td>
+                      <td>
+                        <button type="button" class="btn three room btn-outline-primary">151</button>
+                        <button type="button" class="btn three room btn-outline-primary">152</button>
+                        <button type="button" class="btn three room btn-outline-primary">153</button>
+                        <button type="button" class="btn three room btn-outline-primary">154</button>
+                        <button type="button" class="btn three room btn-outline-primary">155</button>
+                        <button type="button" class="btn three room btn-outline-primary">156</button>
+                        <button type="button" class="btn three room btn-outline-primary">157</button>
+                        <button type="button" class="btn three room btn-outline-primary">158</button>
+                        <button type="button" class="btn three room btn-outline-primary">159</button>
+                        <button type="button" class="btn three room btn-outline-primary">160</button>
+                        <button type="button" class="btn three room btn-outline-primary">161</button>
+                        <button type="button" class="btn three room btn-outline-primary">162</button>
+                        <button type="button" class="btn three room btn-outline-primary">163</button>
+                        <button type="button" class="btn three room btn-outline-primary">164</button>
+                        <button type="button" class="btn three room btn-outline-primary">165</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>47</td>
+                      <td>TB and Chest Female (TF) - 307</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">11</button>
+                        <button type="button" class="btn room btn-outline-primary">12</button>
+                        <button type="button" class="btn room btn-outline-primary">13</button>
+                        <button type="button" class="btn room btn-outline-primary">14</button>
+                        <button type="button" class="btn room btn-outline-primary">15</button>
+                        <button type="button" class="btn room btn-outline-primary">16</button>
+                        <button type="button" class="btn room btn-outline-primary">17</button>
+                        <button type="button" class="btn room btn-outline-primary">18</button>
+                        <button type="button" class="btn room btn-outline-primary">19</button>
+                        <button type="button" class="btn room btn-outline-primary">20</button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>48</td>
+                      <td>TB and Chest Male (TF) - 307</td>
+                      <td>
+                        <button type="button" class="btn room btn-outline-primary">1</button>
+                        <button type="button" class="btn room btn-outline-primary">2</button>
+                        <button type="button" class="btn room btn-outline-primary">3</button>
+                        <button type="button" class="btn room btn-outline-primary">4</button>
+                        <button type="button" class="btn room btn-outline-primary">5</button>
+                        <button type="button" class="btn room btn-outline-primary">6</button>
+                        <button type="button" class="btn room btn-outline-primary">7</button>
+                        <button type="button" class="btn room btn-outline-primary">8</button>
+                        <button type="button" class="btn room btn-outline-primary">9</button>
+                        <button type="button" class="btn room btn-outline-primary">10</button>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+<script type="text/javascript">
+  var $table = $('#fresh-table')
+
+  $(function () {
+    $table.bootstrapTable({
+      classes: 'table table-hover table-striped',
+      search: true,
+      showRefresh: true,
+      showToggle: true,
+      showColumns: true,
+      pagination: true,
+      striped: true,
+      sortable: true,
+      pageSize: 3,
+      pageList: [3, 5, 10, 25, 50, 100],
+
+      formatShowingRows: function (pageFrom, pageTo, totalRows) {
+        return ''
+      },
+      formatRecordsPerPage: function (pageNumber) {
+        return pageNumber + ' rows visible'
+      }
+    })
+
+  })
+
+  let menuToggle = document.querySelector('.toggle');
+  let navigation = document.querySelector('.navigation');
+  menuToggle.onclick = function () {
+    menuToggle.classList.toggle('active');
+    navigation.classList.toggle('active');
+  }
+
+  let list = document.querySelectorAll('.list')
+  for (let i = 0; i < list.length; i++) {
+    list[i].onclick = function () {
+      let j = 0;
+      while (j < list.length) {
+        list[j++].className = 'list';
+      }
+      list[i].className = 'list active';
+    }
+  }
+</script>
+
+<script src="https://kit.fontawesome.com/d70c1f6414.js" crossorigin="anonymous"></script>
+
+</html>

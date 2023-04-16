@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Popup</title>
+        <link rel="stylesheet" type="text/css" href="css\popupstyle.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="content">
+                <button class="open-popup">Read More</button>
+            </div>
+        </div>
+        <div class="popup">
+            <button class="close-btn">&times;</button>
+        </div>
+    </body>
+    <script>document.querySelector(".open-popup").addEventListener("click", function () {
+        document.body.classList.add("active-popup");
+    });
+    document.querySelector(".popup .close-btn").addEventListener("click", function () {
+        document.body.classList.remove("active-popup");
+    });
+    </script>
+</html>

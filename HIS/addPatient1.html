@@ -1,0 +1,732 @@
+<html>
+
+<head>
+  <title>Patient Registration</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css\style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <script src="https://kit.fontawesome.com/d70c1f6414.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css\trans.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+  <h1 class="Heading1">Patient Registration</h1>
+  <form method="post" action="patient_registration" >
+  <div class="navigation">
+    <ul>
+      <li class="list active">
+        <b></b>
+        <b></b>
+        <a href="addPatient1.html">
+          <span class="icon"><i class="fa fa-light fa-hospital-user"></i></span>
+          <span class="title">Patient Registration</span>
+        </a>
+      </li>
+      <li class="list ">
+        <a href="addDoctor.html">
+          <b></b>
+          <b></b>
+          <span class="icon"><i class=" fa fa-light fa-user-doctor"></i></span>
+          <span class="title">Doctor Registration</span>
+        </a>
+      </li>
+      <li class="list ">
+        <a href="addNurse.html">
+          <b></b>
+          <b></b>
+          <span class="icon"><i class="fa fa-light fa-user-nurse"></i></span>
+          <span class="title">Nurse Registration</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <b></b>
+          <b></b>
+          <span class="icon"><i class="bi bi-clipboard2-pulse-fill"></i></i></span>
+          <span class="title">Patient Data</span>
+        </a>
+      </li>
+      <li class="list ">
+        <a href="#">
+          <b></b>
+          <b></b>
+          <span class="icon"><i class="bi bi-clipboard2-plus-fill"></i></span>
+          <span class="title">Doctor Data</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <b></b>
+          <b></b>
+          <span class="icon"><i class="fa fa-light fa-notes-medical"></i></span>
+          <span class="title">Nurse Data</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <b></b>
+          <b></b>
+          <span class="icon"><i class="fa fa-light fa-calendar-check"></i></span>
+          <span class="title">Appointment</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <b></b>
+          <b></b>
+          <span class="icon"><i class="fa fa-light fa-house-medical-circle-check"></i></span>
+          <span class="title">Appointment Data</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="BedAvailability.html">
+          <b></b>
+          <b></b>
+          <span class="icon"><i class="fa fa-light fa-bed-pulse"></i></span>
+          <span class="title">Bed Availability</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="toggle">
+    <i class=" open fa fa-solid fa-bars"></i>
+    <i class="close fa-solid fa-xmark"></i>
+  </div>
+
+
+
+  <div class="form">
+    <select name="TiTle" onchange="combochange(TiTle)" id="titlebox">
+      <option selected="selected" value="">Title</option>
+      <option value="Mr.">Mr.</option>
+      <option value="Mrs.">Mrs.</option>
+      <option value="Ms.">Ms.</option>
+      <option value="Dr.">Dr.</option>
+      <option value="Master.">Master.</option>
+      <option value="Baby.">Baby.</option>
+      <option value="Baby Boy Of.">Baby Boy Of.</option>
+      <option value="Baby Girl Of.">Baby Girl Of.</option>
+      <option value="Lt.col.">Lt.col.</option>
+      <option value="Col.">Col.</option>
+      <option value="Major.">Major.</option>
+      <option value="Brother.">Brother.</option>
+      <option value="Sr.">Sr.</option>
+      <option value="Prof.">Prof.</option>
+      <option value="Brig.">Brig.</option>
+      <option value="Highness.">Highness.</option>
+      <option value="Fr.">Fr.</option>
+      <option value="Capt.">Capt.</option>
+      <option value="Sq.Ldr.">Sq.Ldr.</option>
+      <option value="Sheik.">Sheik.</option>
+      <option value="Justice.">Justice.</option>
+      <option value="Rev.">Rev.</option>
+      <option value="COL (DR).">COL (DR).</option>
+      <option value="Bishop.">Bishop.</option>
+      <option value="CAPT.(DR).">CAPT.(DR).</option>
+      <option value="Pastor.">Pastor.</option>
+      <option value="CDR.">CDR.</option>
+      <option value="WG. CDR.">WG. CDR.</option>
+      <option value="SUB.">SUB.</option>
+      <option value="President.">President.</option>
+      <option value="Lieutenant.">Lieutenant.</option>
+      <option value="Aircmoe.">Aircmoe.</option>
+      <option value="Hon.">Hon.</option>
+      <option value="Commodore.">Commodore.</option>
+    </select>
+
+
+    <label class="custom-field one">
+      <input name="name_first" value="" type="text" placeholder=" " />
+      <span class="placeholder1">First Name</span>
+    </label>
+
+
+    <label class="custom-field two">
+      <input name="name_last" value="" type="text" placeholder=" " />
+      <span class="placeholder1">Last Name</span>
+    </label>
+
+
+    <label class="custom-field three">
+      <input name="name_2" value="" type="text" placeholder=" " />
+      <span class="placeholder1">Father's/Husband's Name</span>
+    </label>
+
+
+    <label class="custom-field four">
+      <input name="name_3" value="" type="text" placeholder=" " />
+      <span class="placeholder1">Mother's/Spouse's Name</span>
+    </label>
+
+
+    <label class="custom-field five form-label" for="typeNumber">
+      <input name="age" type="number" id="typeNumber" placeholder=" " />
+      <span class="placeholder1">Age</span>
+    </label>
+
+
+    <div>
+      <label class="custom-field six">
+        <input class="placeholder1" id="date-text" name="dob" type="datetime-local" placeholder="Date of Birth" />
+      </label>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      flatpickr("input[type=datetime-local]", {});
+    </script>
+    </label>
+
+
+    <div>
+      <label class="custom-field seven">
+        <span>Gender</span>
+      </label>
+      <div class="gender-radio">
+        <label class="gender-option">
+          <input type="radio" onfocus="imgchange(this.form)" value="m" name="sex" />
+          <span class="radio"></span>
+          <span>Male</span>
+        </label>
+        <label class="gender-option">
+          <input type="radio" value="f" name="sex" />
+          <span class="radio"></span>
+          <span>Female</span>
+        </label>
+        <label class="gender-option">
+          <input type="radio" value="t" name="sex" />
+          <span class="radio"></span>
+          <span>Transgender</span>
+        </label>
+      </div>
+    </div>
+
+
+    <select name="religion" class="religion" onchange="combochange(ReliGion)">
+      <option selected="selected" value="">Religion</option>
+      <option value="Hindu">Hindu</option>
+      <option value="Muslim">Muslim</option>
+      <option value="Christian">Christian</option>
+      <option value="Jainism">Jainism</option>
+      <option value="Buddhism">Buddhism</option>
+      <option value="Sikhism">Sikhism</option>
+    </select>
+
+
+    <div>
+      <label class="custom-field eight">
+        <span>Blood Group</span>
+      </label>
+      <div id="blg-radio">
+        <label id="blg-option">
+          <input name="blood_group" type="radio" value="A" />
+          <span class="radio"></span>
+          <span>A</span>
+        </label>
+        <label id="blg-option">
+          <input name="blood_group" type="radio" value="B" />
+          <span class="radio"></span>
+          <span>B</span>
+        </label>
+        <label id="blg-option">
+          <input name="blood_group" type="radio" value="AB" />
+          <span class="radio"></span>
+          <span>AB</span>
+        </label>
+        <label id="blg-option">
+          <input name="blood_group" type="radio" value="O" />
+          <span class="radio"></span>
+          <span>O</span>
+        </label>
+        <label id="blg">
+          <input name="blood_group" type="radio" value="new" onclick="othergroup('Other')" />
+          <span class="radio"></span>
+          <span>Other</span>
+        </label>
+        <label class="custom-field forteen">
+          <input name="group_other" type="text" placeholder=" ">
+        </label>
+      </div>
+    </div>
+
+
+    <div>
+      <label class="custom-field nine">
+        <span>RH</span>
+      </label>
+      <div id="RH-radio">
+        <label id="RH-option">
+          <input name="rhfactor" type="radio" value="+ve" />
+          <span class="radio"></span>
+          <span>+ve</span>
+        </label>
+        <label id="RH-option">
+          <input name="rhfactor" type="radio" value="-ve" />
+          <span class="radio"></span>
+          <span>-ve</span>
+        </label>
+      </div>
+    </div>
+
+
+    <div>
+      <label class="custom-field ten">
+        <span>Civil Status</span>
+      </label>
+      <div id="cs-radio">
+        <label id="cs-option">
+          <input name="civil_status" type="radio" value="single" />
+          <span class="radio"></span>
+          <span>Single</span>
+        </label>
+        <label id="cs-option">
+          <input name="civil_status" type="radio" value="married" />
+          <span class="radio"></span>
+          <span>Married</span>
+        </label>
+        <label id="cs-option">
+          <input name="civil_status" type="radio" value="divorced" />
+          <span class="radio"></span>
+          <span>Divorced</span>
+        </label>
+        <label id="cs-option">
+          <input name="civil_status" type="radio" value="widowed" />
+          <span class="radio"></span>
+          <span>Widowed</span>
+        </label>
+      </div>
+    </div>
+
+
+    <div>
+      <label class="custom-field eleven">
+        <span>Local Address </span>
+      </label>
+      <div id="la-radio">
+        <label id="la-option">
+          <input name="addr_is_valid" type="radio" value="Present" />
+          <span class="radio"></span>
+          <span>Present</span>
+        </label>
+        <label id="la-option">
+          <input name="addr_is_valid" type="radio" value="Permanent" />
+          <span class="radio"></span>
+          <span>Permanent</span>
+        </label>
+        <label id="la-option">
+          <input name="addr_is_valid" type="radio" value="Employee" />
+          <span class="radio"></span>
+          <span>Employee</span>
+        </label>
+      </div>
+    </div>
+
+
+    <label class="custom-field twelve">
+      <input type="text" name="addr_str1" value="" placeholder=" " />
+      <span class="placeholder1">Street 1</span>
+    </label>
+
+
+    <label class="custom-field thirteen">
+      <input type="text" placeholder=" " name="addr_str2" value="" />
+      <span class="placeholder1">Street 2</span>
+    </label>
+
+
+    <select name="addr_area" id="areatown_select" onchange="select_pinc(this.value);">
+      <option selected="selected" value="-1">---Select Area---</option>
+    </select>
+
+    <select name="addr_city" class="city" onchange="state(event);">
+      <option selected="selected" value="">Select Town/City</option>
+      <option value="23865">Ahmedabad</option>
+      <option value="9012">Alappuzha</option>
+      <option value="23834">Ampang</option>
+      <option value="23800">Andaman</option>
+      <option value="23798">Angeles</option>
+      <option value="1">ARIYALUR</option>
+      <option value="14093">Bagalkot</option>
+      <option value="9011">Bangalore</option>
+      <option value="14701">Bangalore Rural</option>
+      <option value="14890">Belgaum</option>
+      <option value="15608">Bellary</option>
+      <option value="15999">Bidar</option>
+      <option value="16302">Bijapur</option>
+      <option value="16711">Chamrajnagar</option>
+      <option value="219">CHENNAI</option>
+      <option value="16911">Chickmagalur</option>
+      <option value="17215">Chikkaballapur</option>
+      <option value="17317">Chitradurga</option>
+      <option value="23841">Chittoor</option>
+      <option value="378">Coimbatore</option>
+      <option value="991">CUDDALORE</option>
+      <option value="17630">Dakshina Kannada</option>
+      <option value="18101">Davangere</option>
+      <option value="1476">DHARMAPURI</option>
+      <option value="18422">Dharwad</option>
+      <option value="1733">DINDIGUL</option>
+      <option value="9307">Ernakulam</option>
+      <option value="2197">ERODE</option>
+      <option value="18637">Gadag</option>
+      <option value="18819">Gulbarga</option>
+      <option value="23849">GUNTUR</option>
+      <option value="19241">Hassan</option>
+      <option value="19659">Haveri</option>
+      <option value="23831">Hyderabad</option>
+      <option value="9694">Idukki</option>
+      <option value="23854">KANCHIPURAM</option>
+      <option value="9985">Kannur</option>
+      <option value="9007">KANYAKUMARI</option>
+      <option value="9010">KARAIKAL</option>
+      <option value="8762">KARUR</option>
+      <option value="10361">Kasargod</option>
+      <option value="19911">Kodagu</option>
+      <option value="20130">Kolar</option>
+      <option value="9008">KOLLAM</option>
+      <option value="20448">Koppal</option>
+      <option value="10943">Kottayam</option>
+      <option value="11345">Kozhikode</option>
+      <option value="23804">KRISHNAGIRI</option>
+      <option value="6880">MADURAI</option>
+      <option value="14022">Mahe</option>
+      <option value="23862">Maitama</option>
+      <option value="11755">Malappuram</option>
+      <option value="23857">Malda</option>
+      <option value="20654">Mandya</option>
+      <option value="23868">Midnapore</option>
+      <option value="23869">Midnapur</option>
+      <option value="23794">MUMBAI</option>
+      <option value="21003">Mysore</option>
+      <option value="23818">Nagapattinam</option>
+      <option value="23790">NAMAKKAL</option>
+      <option value="23796">NILGIRIS</option>
+      <option value="23829">Nizamabad</option>
+      <option value="23825">NOIDA</option>
+      <option value="12186">Palakkad</option>
+      <option value="23799">Pampanga</option>
+      <option value="12635">Pathanamthitta</option>
+      <option value="23813">peramabalur</option>
+      <option value="9009">PONDICHERRY </option>
+      <option value="7280">PUDUKKOTTAI</option>
+      <option value="23838">Pune</option>
+      <option value="21406">Raichur</option>
+      <option value="21694">Ramanagar</option>
+      <option value="7943">RAMANATHAPURAM</option>
+      <option value="23801">Salem</option>
+      <option value="21841">Shimoga</option>
+      <option value="7625">SIVAGANGA</option>
+      <option value="8255">THANJAVUR</option>
+      <option value="2529">THENI</option>
+      <option value="12946">Thiruvananthapuram</option>
+      <option value="13353">Thrissur</option>
+      <option value="2584">TIRUCHIRAPPALLI</option>
+      <option value="3067">TIRUNELVELI</option>
+      <option value="904">Tirupur</option>
+      <option value="3622">TIRUVALLUR</option>
+      <option value="4012">TIRUVANNAMALAI</option>
+      <option value="4500">TIRUVARUR</option>
+      <option value="22203">Tumkur</option>
+      <option value="4842">TUTICORIN</option>
+      <option value="22767">Udupi</option>
+      <option value="23845">UTTAR PRADESH</option>
+      <option value="23101">Uttara Kannada</option>
+      <option value="5272">VELLORE</option>
+      <option value="5950">VILLUPURAM</option>
+      <option value="6601">VIRUDHUNAGAR</option>
+      <option value="13832">Wayanad</option>
+      <option value="23593">Yadgir</option>
+    </select>
+
+    <select name="district_name" class="district">
+      <option selected="selected" value="">Select District</option>
+      <option value="ARIYALUR ">ARIYALUR</option>
+      <option value="CHENNAI ">CHENNAI</option>
+      <option value="COIMBATORE ">COIMBATORE</option>
+      <option value="Tirupur
+                            ">Tirupur</option>
+      <option value="CUDDALORE ">CUDDALORE</option>
+      <option value="DHARMAPURI ">DHARMAPURI</option>
+      <option value="DINDIGUL ">DINDIGUL</option>
+      <option value="ERODE ">ERODE</option>
+      <option value="THENI ">THENI</option>
+      <option value="TIRUCHIRAPPALLI
+                            ">TIRUCHIRAPPALLI</option>
+      <option value="TIRUNELVELI ">TIRUNELVELI</option>
+      <option value="TIRUVALLUR ">TIRUVALLUR</option>
+      <option value="TIRUVANNAMALAI ">TIRUVANNAMALAI</option>
+      <option value="TIRUVARUR ">TIRUVARUR</option>
+      <option value="TUTICORIN
+                            ">TUTICORIN</option>
+      <option value="VELLORE ">VELLORE</option>
+      <option value="VILLUPURAM ">VILLUPURAM</option>
+      <option value="VIRUDHUNAGAR ">VIRUDHUNAGAR</option>
+      <option value="MADURAI ">MADURAI</option>
+      <option value="PUDUKKOTTAI
+                            ">PUDUKKOTTAI</option>
+      <option value="SIVAGANGA ">SIVAGANGA</option>
+      <option value="RAMANATHAPURAM ">RAMANATHAPURAM</option>
+      <option value="THANJAVUR ">THANJAVUR</option>
+      <option value="KARUR ">KARUR</option>
+      <option value="KANYAKUMARI
+                            ">KANYAKUMARI</option>
+      <option value="Kollam ">Kollam</option>
+      <option value="Pondicherry ">Pondicherry</option>
+      <option value="Bangalore ">Bangalore</option>
+      <option value="Alappuzha ">Alappuzha</option>
+      <option value="Ernakulam ">Ernakulam</option>
+      <option value="Idukki
+                            ">Idukki</option>
+      <option value="Kannur ">Kannur</option>
+      <option value="Kasargod ">Kasargod</option>
+      <option value="Kottayam ">Kottayam</option>
+      <option value="Kozhikode ">Kozhikode</option>
+      <option value="Malappuram ">Malappuram</option>
+      <option value="Palakkad
+                            ">Palakkad</option>
+      <option value="Pathanamthitta ">Pathanamthitta</option>
+      <option value="Thiruvananthapuram ">Thiruvananthapuram</option>
+      <option value="Thrissur ">Thrissur</option>
+      <option value="Wayanad ">Wayanad</option>
+      <option value="Karaikal
+                            ">Karaikal</option>
+      <option value="Mahe ">Mahe</option>
+      <option value="Bagalkot ">Bagalkot</option>
+      <option value="Bangalore Rural ">Bangalore Rural</option>
+      <option value="Belgaum ">Belgaum</option>
+      <option value="Bellary ">Bellary</option>
+      <option value="Bidar
+                            ">Bidar</option>
+      <option value="Bijapur ">Bijapur</option>
+      <option value="Chamrajnagar ">Chamrajnagar</option>
+      <option value="Chickmagalur ">Chickmagalur</option>
+      <option value="Chikkaballapur ">Chikkaballapur</option>
+      <option value="Chitradurga
+                            ">Chitradurga</option>
+      <option value="Dakshina Kannada ">Dakshina Kannada</option>
+      <option value="Davangere ">Davangere</option>
+      <option value="Dharwad ">Dharwad</option>
+      <option value="Gadag ">Gadag</option>
+      <option value="Gulbarga ">Gulbarga</option>
+      <option value="Hassan
+                            ">Hassan</option>
+      <option value="Haveri ">Haveri</option>
+      <option value="Kodagu ">Kodagu</option>
+      <option value="Kolar ">Kolar</option>
+      <option value="Koppal ">Koppal</option>
+      <option value="Mandya ">Mandya</option>
+      <option value="Mysore
+                            ">Mysore</option>
+      <option value="Raichur ">Raichur</option>
+      <option value="Ramanagar ">Ramanagar</option>
+      <option value="Shimoga ">Shimoga</option>
+      <option value="Tumkur ">Tumkur</option>
+      <option value="Udupi ">Udupi</option>
+      <option value="Uttara Kannada
+                            ">Uttara Kannada</option>
+      <option value="Yadgir ">Yadgir</option>
+      <option value="Namakkal ">Namakkal</option>
+      <option value="Mumbai ">Mumbai</option>
+      <option value="NILGIRIS ">NILGIRIS</option>
+      <option value="canada ">canada</option>
+      <option value="Philippines
+                            ">Philippines</option>
+      <option value="Andaman ">Andaman</option>
+      <option value="Salem ">Salem</option>
+      <option value="KRISHNAGIRI ">KRISHNAGIRI</option>
+      <option value="perambalur ">perambalur</option>
+      <option value="Nagapattinam ">Nagapattinam</option>
+      <option value="NOIDA
+                            ">NOIDA</option>
+      <option value="Nizamabad ">Nizamabad</option>
+      <option value="Hyderabad ">Hyderabad</option>
+      <option value="Ampang ">Ampang</option>
+      <option value="Sangli ">Sangli</option>
+      <option value="Chittoor ">Chittoor</option>
+      <option value="ETAWAH
+                            ">ETAWAH</option>
+      <option value="GUNTUR ">GUNTUR</option>
+      <option value="KANCHIPURAM ">KANCHIPURAM</option>
+      <option value="Malda ">Malda</option>
+      <option value="BAILHONGAL ">BAILHONGAL</option>
+      <option value="Maitama ">Maitama</option>
+      <option value="Ahmedabad
+                            ">Ahmedabad</option>
+      <option value="Kolkatta ">Kolkatta</option>
+      <option value="SAHARANPUR ">SAHARANPUR</option>
+    </select>
+
+
+    <label class="custom-field fifteen">
+      <input type="text" placeholder=" " name="addr_zip" value="" />
+      <span class="placeholder1">Pincode</span>
+    </label>
+
+    <select name="state" class="State">
+      <option selected="selected" value="">Tamilnadu</option>
+      <option value="ANDAMAN ">ANDAMAN</option>
+      <option value="Abuja ">Abuja</option>
+      <option value="Andhra Pradesh ">Andhra Pradesh</option>
+      <option value="Gujarat
+                            ">Gujarat</option>
+      <option value="KARAIKAL ">KARAIKAL</option>
+      <option value="Karnataka ">Karnataka</option>
+      <option value="Kerala ">Kerala</option>
+      <option value="MAHARASHTRA ">MAHARASHTRA</option>
+      <option value="Philippines ">Philippines</option>
+      <option value="Pondicherry
+                            ">Pondicherry</option>
+      <option value="SRILANKA ">SRILANKA</option>
+      <option value="Selangor ">Selangor</option>
+      <option value="Tamilnadu " selected=" ">Tamilnadu</option>
+      <option value="Telangana ">Telangana</option>
+      <option value="Uttar Pradesh
+                            ">Uttar Pradesh</option>
+      <option value="West Bengal ">West Bengal</option>
+      <option value="canada ">canada</option>
+      <option value="karnataka ">karnataka</option>
+    </select>
+    <select name="country" id="country_select " onchange="change_state_city(this.value); ">
+      <option></option>
+      <option selected=" " value="India">India</option>
+      <option value="Malaysia ">Malaysia</option>
+      <option value="Nigeria">Nigeria</option>
+      <option value="Philippines ">Philippines</option>
+      <option value="Singapore ">Singapore</option>
+      <option value="Srilanka ">Srilanka</option>
+      <option value="canada ">Canada</option>
+    </select>
+
+    <label class="custom-field billtype">
+      <input type="varchar" placeholder=" " name="bill" />
+      <span class="placeholder1">Bill Type</span>
+    </label>
+
+    <label class="custom-field auth form-label">
+      <input type="number" name="auth" placeholder=" " />
+      <span class="placeholder1">Auth Number</span>
+    </label>
+
+    <label class="custom-field insu form-label">
+      <input type="number" placeholder=" " name="ins" />
+      <span class="placeholder1">Insurance Number</span>
+    </label>
+
+    <label class="custom-field ID form-label" >
+      <input type="number" placeholder=" " name="id" />
+      <span class="placeholder1">ID Number</span>
+    </label>
+
+    <label class="custom-field policy form-label">
+      <input type="number" placeholder=" " name="policy" />
+      <span class="placeholder1">Policy Number</span>
+    </label>
+
+    <label class="custom-field claim">
+      <input type="text" placeholder=" " name="insurance_nr " value="" />
+      <span class="placeholder1">Authorization/Claim Number</span>
+    </label>
+
+    <select name="insurance_type" class="corpo">
+      <option selected="selected" value="">Insurance/Corporate</option>
+      <option value="100 ">Star Health Pvt Ltd</option>
+      <option value="119 ">MEDI ASSIST</option>
+      <option value="120 ">RAILWAYS</option>
+      <option value="101
+                            ">Health India</option>
+      <option value="102 ">Religare</option>
+      <option value="103 ">Max Bupa</option>
+      <option value="104 ">Sri Gokulam</option>
+      <option value="105 ">Heritage Health Care</option>
+      <option value="106 ">Anyuta</option>
+      <option value="107
+                            ">Vipul Medcord</option>
+      <option value="108 ">Roth Shield</option>
+      <option value="109 ">Genines India</option>
+      <option value="110 ">GHPL</option>
+      <option value="111 ">Happy</option>
+      <option value="112 ">Ericson</option>
+      <option value="113
+                            ">Sundram Fastners (TVS)</option>
+      <option value="114 ">Cholamandalam MS</option>
+      <option value="115 ">Arasu Emergency &amp; Accident Relief Care</option>
+      <option value="116 ">CMCHISTN (C M Scheme)</option>
+      <option value="117 ">BSNL</option>
+      <option value="118
+                            ">DHS</option>
+      <option value="121 ">ESI</option>
+      <option value="122 ">CECRI</option>
+      <option value="123 ">AIRPORT</option>
+      <option value="124 ">VIDAL TPA</option>
+      <option value="125 ">BAJAJ ALLIANZ</option>
+      <option value="126 ">SBI</option>
+      <option value="127
+                            ">SRI GOVINDARAJA TEXT TILES</option>
+      <option value="128 ">JASMINE TOWERS</option>
+      <option value="129 ">PANDIAN CHEMICALS</option>
+      <option value="130 ">TOF</option>
+      <option value="131 ">HI Tech Arai Pvt Ltd</option>
+      <option value="132
+                            ">UNITED HEALTHCARE PVT LTD</option>
+      <option value="133 ">MD INDIA_TNNHIS - EMLOYEES SCHEME</option>
+      <option value="134 ">MD INDIA_TNNHIS - PENSIONER SCHEME</option>
+      <option value="135 ">PHM ( PARAMOUNT HEALTHCARE MANAGEMENT )</option>
+      <option value="136
+                            ">TANGEDCO</option>
+      <option value="137 ">MEDICARE</option>
+      <option value="138 ">Apollo Munich</option>
+      <option value="139 ">FHPL</option>
+      <option value="140 ">PR Construction</option>
+      <option value="141 ">HAYAKRIV CONSTRUCTIONS</option>
+      <option value="142
+                            ">K.N.R CONSTRUCTIONS</option>
+      <option value="143 ">UNICORN CONSTRUCTIONS</option>
+      <option value="144 ">NAGASIVA POLYTECHNIC COLLEGE</option>
+      <option value="145 ">FIRST GARMENTS COMPANY</option>
+      <option value="146 ">G.G.K COMPANY</option>
+      <option value="147
+                            ">MEENAKA CARDS</option>
+      <option value="148 ">VMCH STAFF</option>
+      <option value="149 ">SCHOOL STUDENT</option>
+      <option value="150 ">VELAMMAL MEDICAL COLLEGE STUDENT</option>
+      <option value="151 ">VELAMMAL ALLIED HEALTH SCIENCE STUDENT</option>
+      <option value="152
+                            ">VELAMMAL COLLEGE OF ENGINEERING AND TECHNOLOG</option>
+      <option value="153 ">UNIVERSAL SOMPO GENERAL INSURANCE</option>
+      <option value="154 ">MED SAVE</option>
+    </select>
+
+    <input id="subbutton" type="submit" class="subposi" value="Submit" />
+    <input id="subbutton" type="reset" class="resetposi" value="Reset" />
+
+  </div>
+  <script>
+    let menuToggle = document.querySelector('.toggle');
+    let navigation = document.querySelector('.navigation');
+    menuToggle.onclick = function () {
+      menuToggle.classList.toggle('active');
+      navigation.classList.toggle('active');
+    }
+
+    let list = document.querySelectorAll('.list')
+    for (let i = 0; i < list.length; i++) {
+      list[i].onclick = function () {
+        let j = 0;
+        while (j < list.length) {
+          list[j++].className = 'list';
+        }
+        list[i].className = 'list active';
+      }
+    }
+  </script>
+  <script src="https://kit.fontawesome.com/d70c1f6414.js" crossorigin="anonymous"></script>
+</form>
+</body>
+
+</html>

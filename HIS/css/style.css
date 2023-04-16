@@ -1,0 +1,1290 @@
+body {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  background: #f2f2f2;
+  overflow-x: hidden;
+}
+
+.Heading1 {
+  position: absolute;
+  width: 492px;
+  height: 72px;
+  left: 370px;
+  top: 25px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 72px;
+  /* identical to box height */
+  color: #1a57aa;
+}
+.navigation{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  width: 70px;
+  border-radius: 10px;
+  border-left: 5px solid #1a57aa;
+  box-sizing: initial;
+  background: #1a57aa;
+  transition: width 0.5s;
+  overflow-x: hidden;
+}
+
+.navigation.active{
+  width: 300px;
+   
+}
+
+
+.navigation ul{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 40px;
+}
+
+.navigation ul li{
+  position: relative;
+  list-style: none;
+  width: 100%;
+  border-top-left-radius:20px;
+  border-bottom-left-radius:20px;
+}
+
+.navigation ul li b:nth-child(1){
+  position: absolute;
+  top: -20px;
+  height: 20px;
+  width:100%;
+  background: #f2f2f2;
+  display: none;
+}
+
+.navigation ul li b:nth-child(1)::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom-right-radius: 20px;
+  background: #1a57aa;
+}
+
+
+.navigation ul li b:nth-child(2){
+  position: absolute;
+  bottom: -20px;
+  height: 20px;
+  width:100%;
+  display: none;
+  background: #f2f2f2;
+}
+
+.navigation ul li b:nth-child(2)::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 20px;
+  background: #1a57aa;
+}
+
+.navigation ul li.active b:nth-child(1),
+.navigation ul li.active b:nth-child(2)
+{
+  display: block;
+
+}
+
+.navigation ul li.active{
+  background: #f2f2f2;
+}
+
+.navigation ul li a{
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+.navigation ul li.active a{
+  color: #1a57aa;
+}
+
+.navigation ul li a .icon{
+  position: relative;
+  top:18px;
+  display: block;
+  min-width: 60px;
+  height: 62px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.navigation ul li a i{
+  font-size: 1.5em;
+  
+}
+
+.navigation ul li a .title{
+  position: relative;
+  display: block;
+  padding-left: 10px;
+  height: 60px;
+  line-height: 60px;
+  white-space: normal;
+}
+
+.toggle{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #1a57aa;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle.active{
+  background: #1a57aa;
+}
+
+.toggle i{
+  position: absolute;
+  color: #f2f2f2;
+  font-size: 34px;
+  display: none;
+}
+
+.toggle i.open,
+.toggle.active i.close
+{
+  display: block;
+}
+
+.toggle i.close,
+.toggle.active i.open{
+  display: none;
+}
+#titlebox {
+  position: absolute;
+  width: 880px;
+  height: 35px;
+  left: 335px;
+  top: 150px;
+  background: #fffcfc;
+  border-radius: 8px;
+  border: 2px solid #1a57aa;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  color: #1a57aa;
+  padding-left: 8px;
+}
+
+.form {
+  position: relative;
+  bottom: 30px;
+  left: 40px;
+}
+/*General fields css*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.custom-field {
+  position: absolute;
+  font-size: 14px;
+  border-top: 20px solid transparent;
+  margin-bottom: 5px;
+  display: inline-block;
+  --field-padding: 12px;
+  width: 405px;
+  height: 33px;
+  left: 335px;
+  top: 210px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+.custom-field input {
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: var(--field-padding);
+  border-radius: 8px;
+  position: relative;
+  top: -20;
+  width: 405px;
+  height: 35px;
+  outline: none;
+  font-size: 18px;
+  color: #1a57aa;
+  font-weight: 500;
+}
+
+.custom-field .placeholder1 {
+  position: absolute;
+  left: var(--field-padding);
+  width: calc(100% - (var(--field-padding) * 2));
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  top: 22px;
+  line-height: 100%;
+  transform: translateY(-175%);
+  transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+  position: absolute;
+  width: 330px;
+  height: 26px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  top: 32px;
+  left: 17px;
+  color: #1a57aa;
+}
+
+.custom-field input.dirty + .placeholder1,
+.custom-field input:focus + .placeholder1,
+.custom-field input:not(:placeholder-shown) + .placeholder1 {
+  top: -30px;
+  font-size: 10px;
+  color: #222;
+}
+
+.custom-field .error-message {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  font-size: 12px;
+  background: #d30909;
+  color: #fff;
+  height: 24px;
+}
+
+.custom-field .error-message:empty {
+  opacity: 0;
+}
+
+/* ONE-First Name */
+.custom-field.one input {
+  background: none;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+  border: 2px solid #1a57aa;
+}
+
+.custom-field.one input + .placeholder1 {
+  left: 8px;
+  padding: 3 5px;
+}
+
+.custom-field.one input.dirty,
+.custom-field.one input:not(:placeholder-shown),
+.custom-field.one input:focus {
+  border-color: #1a57aa;
+  transition-delay: 0.1s;
+}
+
+.custom-field.one input.dirty + .placeholder1,
+.custom-field.one input:not(:placeholder-shown) + .placeholder1,
+.custom-field.one input:focus + .placeholder1 {
+  top: 0;
+  font-size: 15px;
+  color: #1a57aa;
+  background: #f2f2f2;
+  width: auto;
+  height: 20px;
+}
+/*two- Last Name*/
+.custom-field.two input {
+  background: none;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+  border: 2px solid #1a57aa;
+}
+
+.custom-field.two input + .placeholder1 {
+  left: 8px;
+  padding: 3 5px;
+}
+
+.custom-field.two input.dirty,
+.custom-field.two input:not(:placeholder-shown),
+.custom-field.two input:focus {
+  border-color: #1a57aa;
+  transition-delay: 0.1s;
+}
+
+.custom-field.two input.dirty + .placeholder1,
+.custom-field.two input:not(:placeholder-shown) + .placeholder1,
+.custom-field.two input:focus + .placeholder1 {
+  top: 0;
+  font-size: 15px;
+  color: #1a57aa;
+  background: #f2f2f2;
+  width: auto;
+  height: 20px;
+}
+.two {
+  position: relative;
+  top: 279px;
+  left: 803px;
+}
+.custom-field.two {
+  position: absolute;
+  top: 210px;
+  left: 810px;
+}
+/*Three-Father's/Husband's Name*/
+.three {
+  position: relative;
+  top: 374px;
+  left: 20px;
+}
+.custom-field.three input {
+  background: none;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+  border: 2px solid #1a57aa;
+}
+
+.custom-field.three input + .placeholder1 {
+  left: 8px;
+  padding: 3 5px;
+}
+
+.custom-field.three input.dirty,
+.custom-field.three input:not(:placeholder-shown),
+.custom-field.three input:focus {
+  border-color: #1a57aa;
+  transition-delay: 0.1s;
+}
+
+.custom-field.three input.dirty + .placeholder1,
+.custom-field.three input:not(:placeholder-shown) + .placeholder1,
+.custom-field.three input:focus + .placeholder1 {
+  top: 0;
+  font-size: 15px;
+  color: #1a57aa;
+  background: #f2f2f2;
+  width: auto;
+  height: 20px;
+}
+.custom-field.three {
+  position: absolute;
+  top: 270px;
+  left: 335px;
+}
+/*Four Mother's/Spouse's Name*/
+.four {
+  position: relative;
+  left: 63px;
+  top: 374px;
+}
+.custom-field.four input {
+  background: none;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+  border: 2px solid #1a57aa;
+}
+
+.custom-field.four input + .placeholder1 {
+  left: 8px;
+  padding: 3 5px;
+}
+
+.custom-field.four input.dirty,
+.custom-field.four input:not(:placeholder-shown),
+.custom-field.four input:focus {
+  border-color: #1a57aa;
+  transition-delay: 0.1s;
+}
+
+.custom-field.four input.dirty + .placeholder1,
+.custom-field.four input:not(:placeholder-shown) + .placeholder1,
+.custom-field.four input:focus + .placeholder1 {
+  top: 0;
+  font-size: 15px;
+  color: #1a57aa;
+  background: #f2f2f2;
+  width: auto;
+  height: 20px;
+}
+.custom-field.four {
+  position: absolute;
+  top: 270px;
+  left: 810px;
+}
+/*Five age*/
+.five {
+  position: relative;
+  left: 390px;
+  top: 400px;
+}
+.custom-field.five input {
+  background: none;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+  border: 2px solid #1a57aa;
+}
+
+.custom-field.five input + .placeholder1 {
+  left: 8px;
+  padding: 3 5px;
+}
+
+.custom-field.five input.dirty,
+.custom-field.five input:not(:placeholder-shown),
+.custom-field.five input:focus {
+  border-color: #1a57aa;
+  transition-delay: 0.1s;
+}
+
+.custom-field.five input.dirty + .placeholder1,
+.custom-field.five input:not(:placeholder-shown) + .placeholder1,
+.custom-field.five input:focus + .placeholder1 {
+  top: 0;
+  font-size: 15px;
+  color: #1a57aa;
+  background: #f2f2f2;
+  width: auto;
+  height: 20px;
+}
+.custom-field.five {
+  position: absolute;
+  top: 330px;
+  left: 335px;
+}
+/*SIX DOB*/
+
+.six {
+  position: absolute;
+  left: 745px;
+  top: 205px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  color: #1a57aa;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+.custom-field.six input {
+  background: none;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+  border: 2px solid #1a57aa;
+  width: 405px;
+  height: 32px;
+  position: absolute;
+  left: 0px;
+  top: 35px;
+  color: #1a57aa;
+}
+
+.custom-field.six input + .placeholder1 {
+  left: 8px;
+  padding: 3 5px;
+}
+
+.custom-field.six input.dirty,
+.custom-field.six input:not(:placeholder-shown),
+.custom-field.six input:focus {
+  border-color: #1a57aa;
+  transition-delay: 0.1s;
+}
+
+.custom-field.six input.dirty + .placeholder1,
+.custom-field.six input:not(:placeholder-shown) + .placeholder1,
+.custom-field.six input:focus + .placeholder1 {
+  top: 0;
+  font-size: 20px;
+  color: #09536f;
+  background: #fff;
+  width: auto;
+}
+#date-text::placeholder {
+  color: #1a57aa;
+}
+.custom-field.six {
+  position: absolute;
+  top: 330px;
+  left: 810px;
+  height: 32px;
+}
+/*SEVEN Gender*/
+.seven {
+  position: absolute;
+  left: 335px;
+  top: 390px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  color: #1a57aa;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.gender-radio {
+  position: absolute;
+  height: 36px;
+  left: 810px;
+  top: 395px;
+  padding-right: 20px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  /* identical to box height */
+  color: #1a57aa;
+}
+.gender-option {
+  padding-right: 20px;
+}
+.custom-field.seven {
+  background: #f2f2f2;
+  border: 2px solid #1a57aa;
+}
+.religion {
+  position: absolute;
+  width: 880px;
+  height: 35px;
+  left: 335px;
+  top: 450px;
+  background: #fffcfc;
+  border-radius: 8px;
+  border: 2px solid #1a57aa;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  color: #1a57aa;
+  padding-left: 8px;
+}
+/*Eight Blood Group*/
+.eight {
+  position: absolute;
+  left: 335px;
+  top: 510px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  color: #1a57aa;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+#blg-radio {
+  position: absolute;
+  height: 36px;
+  left: 780px;
+  top: 518px;
+  padding-right: 20px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  /* identical to box height */
+
+  color: #1a57aa;
+}
+#blg-option {
+  padding-right: 20px;
+}
+.custom-field.eight {
+  background: #f2f2f2;
+  border: 2px solid #1a57aa;
+}
+/*forteen Blood Group "Other's" Input Field*/
+.forteen {
+  position: absolute;
+  left: 335px;
+  top: 280px;
+  width: 120px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  color: #1a57aa;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+.custom-field.forteen input {
+  background: none;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+  border: 2px solid #1a57aa;
+  width: 120px;
+  top: -28px;
+  height: 33px;
+  left: -11px;
+}
+.custom-field.forteen input + .placeholder1 {
+  left: 8px;
+  padding: 0 5px;
+}
+.custom-field.forteen {
+  position: absolute;
+  top: -5px;
+  left: 316px;
+  font-size: 14px;
+  border-top: 20px solid transparent;
+  margin-bottom: 5px;
+  display: inline-block;
+  --field-padding: 12px;
+  height: 30px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+/*nine RH*/
+.nine {
+  position: absolute;
+  left: 335px;
+  top: 570px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  color: #1a57aa;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+#RH-radio {
+  position: absolute;
+  height: 36px;
+  left: 780px;
+  top: 575px;
+  padding-right: 20px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  /* identical to box height */
+  color: #1a57aa;
+}
+#RH-option {
+  padding-right: 20px;
+}
+.custom-field.nine {
+  background: #f2f2f2;
+  border: 2px solid #1a57aa;
+}
+/*ten Civil Status*/
+.ten {
+  position: absolute;
+  left: 335px;
+  top: 630px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  color: #1a57aa;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+#cs-radio {
+  position: absolute;
+  height: 36px;
+  left: 780px;
+  top: 635px;
+  padding-right: 20px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  /* identical to box height */
+
+  color: #1a57aa;
+}
+#cs-option {
+  padding-right: 20px;
+}
+.custom-field.ten {
+  background: #f2f2f2;
+  border: 2px solid #1a57aa;
+}
+/*eleven Local Address*/
+.eleven {
+  position: absolute;
+  left: 335px;
+  top: 690px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  color: #1a57aa;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+#la-radio {
+  position: absolute;
+  height: 36px;
+  left: 780px;
+  top: 695px;
+  padding-right: 20px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  /* identical to box height */
+
+  color: #1a57aa;
+}
+#la-option {
+  padding-right: 20px;
+}
+.custom-field.eleven {
+  background: #f2f2f2;
+  border: 2px solid #1a57aa;
+}
+/*twelve Street1*/
+.twelve {
+  position: relative;
+  left: 390px;
+  top: 400px;
+}
+.custom-field.twelve input {
+  background: none;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+  border: 2px solid #1a57aa;
+}
+
+.custom-field.twelve input + .placeholder1 {
+  left: 8px;
+  padding: 3 5px;
+}
+
+.custom-field.twelve input.dirty,
+.custom-field.twelve input:not(:placeholder-shown),
+.custom-field.twelve input:focus {
+  border-color: #1a57aa;
+  transition-delay: 0.1s;
+}
+
+.custom-field.twelve input.dirty + .placeholder1,
+.custom-field.twelve input:not(:placeholder-shown) + .placeholder1,
+.custom-field.twelve input:focus + .placeholder1 {
+  top: 0;
+  font-size: 15px;
+  color: #1a57aa;
+  background: #f2f2f2;
+  width: auto;
+  height: 20px;
+}
+.custom-field.twelve {
+  position: absolute;
+  top: 750px;
+  left: 335px;
+}
+/*thirteen Street2*/
+.thirteen {
+  position: relative;
+  left: 390px;
+  top: 400px;
+  width: 433px;
+}
+.custom-field.thirteen input {
+  background: none;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+  border: 2px solid #1a57aa;
+  width: 435px;
+}
+
+.custom-field.thirteen input + .placeholder1 {
+  left: 8px;
+  padding: 3 5px;
+}
+
+.custom-field.thirteen input.dirty,
+.custom-field.thirteen input:not(:placeholder-shown),
+.custom-field.thirteen input:focus {
+  border-color: #1a57aa;
+  transition-delay: 0.1s;
+}
+
+.custom-field.thirteen input.dirty + .placeholder1,
+.custom-field.thirteen input:not(:placeholder-shown) + .placeholder1,
+.custom-field.thirteen input:focus + .placeholder1 {
+  top: 0;
+  font-size: 15px;
+  color: #1a57aa;
+  background: #f2f2f2;
+  width: auto;
+  height: 20px;
+}
+.custom-field.thirteen {
+  position: absolute;
+  top: 750px;
+  left: 780px;
+}
+/*Area*/
+#areatown_select {
+  position: absolute;
+  width: 880px;
+  height: 35px;
+  left: 335px;
+  top: 810px;
+  background: #fffcfc;
+  border-radius: 8px;
+  border: 2px solid #1a57aa;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  color: #1a57aa;
+  padding-left: 8px;
+}
+/*Town/City*/
+.city {
+  position: absolute;
+  width: 880px;
+  height: 35px;
+  left: 335px;
+  top: 870px;
+  background: #fffcfc;
+  border-radius: 8px;
+  border: 2px solid #1a57aa;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  color: #1a57aa;
+  padding-left: 8px;
+}
+/*District*/
+.district {
+  position: absolute;
+  width: 403px;
+  height: 35px;
+  left: 335px;
+  top: 930px;
+  background: #fffcfc;
+  border-radius: 8px;
+  border: 2px solid #1a57aa;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  color: #1a57aa;
+  padding-left: 8px;
+}
+/*fifteen Pincode*/
+.fifteen {
+  position: relative;
+  left: 390px;
+  top: 400px;
+}
+.custom-field.fifteen input {
+  background: none;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+  border: 2px solid #1a57aa;
+}
+
+.custom-field.fifteen input + .placeholder1 {
+  left: 8px;
+  padding: 3 5px;
+}
+
+.custom-field.fifteen input.dirty,
+.custom-field.fifteen input:not(:placeholder-shown),
+.custom-field.fifteen input:focus {
+  border-color: #1a57aa;
+  transition-delay: 0.1s;
+}
+
+.custom-field.fifteen input.dirty + .placeholder1,
+.custom-field.fifteen input:not(:placeholder-shown) + .placeholder1,
+.custom-field.fifteen input:focus + .placeholder1 {
+  top: 0;
+  font-size: 15px;
+  color: #1a57aa;
+  background: #f2f2f2;
+  width: auto;
+  height: 20px;
+}
+.custom-field.fifteen {
+  position: absolute;
+  top: 930px;
+  left: 810px;
+}
+/*State*/
+.State {
+  position: absolute;
+  width: 403px;
+  height: 35px;
+  left: 335px;
+  top: 990px;
+  background: #fffcfc;
+  border-radius: 8px;
+  border: 2px solid #1a57aa;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  color: #1a57aa;
+  padding-left: 8px;
+}
+/*Country*/
+.Country {
+  position: absolute;
+  width: 403px;
+  height: 35px;
+  left: 810px;
+  top: 990px;
+  background: #fffcfc;
+  border-radius: 8px;
+  border: 2px solid #1a57aa;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  color: #1a57aa;
+  padding-left: 8px;
+}
+/*billtype*/
+.billtype {
+  position: relative;
+  left: 390px;
+  top: 400px;
+}
+.custom-field.billtype input {
+  background: none;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+  border: 2px solid #1a57aa;
+}
+
+.custom-field.billtype input + .placeholder1 {
+  left: 8px;
+  padding: 3 5px;
+}
+
+.custom-field.billtype input.dirty,
+.custom-field.billtype input:not(:placeholder-shown),
+.custom-field.billtype input:focus {
+  border-color: #1a57aa;
+  transition-delay: 0.1s;
+}
+
+.custom-field.billtype input.dirty + .placeholder1,
+.custom-field.billtype input:not(:placeholder-shown) + .placeholder1,
+.custom-field.billtype input:focus + .placeholder1 {
+  top: 0;
+  font-size: 15px;
+  color: #1a57aa;
+  background: #f2f2f2;
+  width: auto;
+  height: 20px;
+}
+.custom-field.billtype {
+  position: absolute;
+  top: 1050px;
+  left: 335px;
+}
+
+/*auth*/
+.auth {
+  position: relative;
+  left: 390px;
+  top: 400px;
+}
+.custom-field.auth input {
+  background: none;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+  border: 2px solid #1a57aa;
+}
+
+.custom-field.auth input + .placeholder1 {
+  left: 8px;
+  padding: 3 5px;
+}
+
+.custom-field.auth input.dirty,
+.custom-field.auth input:not(:placeholder-shown),
+.custom-field.auth input:focus {
+  border-color: #1a57aa;
+  transition-delay: 0.1s;
+}
+
+.custom-field.auth input.dirty + .placeholder1,
+.custom-field.auth input:not(:placeholder-shown) + .placeholder1,
+.custom-field.auth input:focus + .placeholder1 {
+  top: 0;
+  font-size: 15px;
+  color: #1a57aa;
+  background: #f2f2f2;
+  width: auto;
+  height: 20px;
+}
+.custom-field.auth {
+  position: absolute;
+  top: 1050px;
+  left: 810px;
+  width: 403px;
+}
+/*insurance number*/
+.insu {
+  position: relative;
+  left: 390px;
+  top: 400px;
+}
+.custom-field.insu input {
+  background: none;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+  border: 2px solid #1a57aa;
+}
+
+.custom-field.insu input + .placeholder1 {
+  left: 8px;
+  padding: 3 5px;
+}
+
+.custom-field.insu input.dirty,
+.custom-field.insu input:not(:placeholder-shown),
+.custom-field.insu input:focus {
+  border-color: #1a57aa;
+  transition-delay: 0.1s;
+}
+
+.custom-field.insu input.dirty + .placeholder1,
+.custom-field.insu input:not(:placeholder-shown) + .placeholder1,
+.custom-field.insu input:focus + .placeholder1 {
+  top: 0;
+  font-size: 15px;
+  color: #1a57aa;
+  background: #f2f2f2;
+  width: auto;
+  height: 20px;
+}
+.custom-field.insu {
+  position: absolute;
+  top: 1110px;
+  left: 335px;
+}
+/*ID number*/
+.ID {
+  position: relative;
+  left: 390px;
+  top: 400px;
+}
+.custom-field.ID input {
+  background: none;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+  border: 2px solid #1a57aa;
+}
+
+.custom-field.ID input + .placeholder1 {
+  left: 8px;
+  padding: 3 5px;
+}
+
+.custom-field.ID input.dirty,
+.custom-field.ID input:not(:placeholder-shown),
+.custom-field.ID input:focus {
+  border-color: #1a57aa;
+  transition-delay: 0.1s;
+}
+
+.custom-field.ID input.dirty + .placeholder1,
+.custom-field.ID input:not(:placeholder-shown) + .placeholder1,
+.custom-field.ID input:focus + .placeholder1 {
+  top: 0;
+  font-size: 15px;
+  color: #1a57aa;
+  background: #f2f2f2;
+  width: auto;
+  height: 20px;
+}
+.custom-field.ID {
+  position: absolute;
+  top: 1110px;
+  left: 810px;
+  width: 403px;
+}
+/*policy number*/
+.policy {
+  position: relative;
+  left: 390px;
+  top: 400px;
+}
+.custom-field.policy input {
+  background: none;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+  border: 2px solid #1a57aa;
+}
+
+.custom-field.policy input + .placeholder1 {
+  left: 8px;
+  padding: 3 5px;
+}
+
+.custom-field.policy input.dirty,
+.custom-field.policy input:not(:placeholder-shown),
+.custom-field.policy input:focus {
+  border-color: #1a57aa;
+  transition-delay: 0.1s;
+}
+
+.custom-field.policy input.dirty + .placeholder1,
+.custom-field.policy input:not(:placeholder-shown) + .placeholder1,
+.custom-field.policy input:focus + .placeholder1 {
+  top: 0;
+  font-size: 15px;
+  color: #1a57aa;
+  background: #f2f2f2;
+  width: auto;
+  height: 20px;
+}
+.custom-field.policy {
+  position: absolute;
+  top: 1170px;
+  left: 335px;
+}
+/*claim number*/
+.claim {
+  position: relative;
+  left: 390px;
+  top: 400px;
+}
+.custom-field.claim input {
+  background: none;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+  border: 2px solid #1a57aa;
+}
+
+.custom-field.claim input + .placeholder1 {
+  left: 8px;
+  padding: 3 5px;
+}
+
+.custom-field.claim input.dirty,
+.custom-field.claim input:not(:placeholder-shown),
+.custom-field.claim input:focus {
+  border-color: #1a57aa;
+  transition-delay: 0.1s;
+}
+
+.custom-field.claim input.dirty + .placeholder1,
+.custom-field.claim input:not(:placeholder-shown) + .placeholder1,
+.custom-field.claim input:focus + .placeholder1 {
+  top: 0;
+  font-size: 15px;
+  color: #1a57aa;
+  background: #f2f2f2;
+  width: auto;
+  height: 20px;
+}
+.custom-field.claim {
+  position: absolute;
+  top: 1170px;
+  left: 810px;
+  width: 403px;
+}
+/*corpo*/
+.corpo {
+  position: absolute;
+  width: 880px;
+  height: 35px;
+  left: 335px;
+  top: 1230px;
+  background: #fffcfc;
+  border-radius: 8px;
+  border: 2px solid #1a57aa;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  color: #1a57aa;
+  padding-left: 8px;
+}
+#subbutton {
+  background-color: #1a57aa;
+
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  color: #f2f2f2;
+  border: 0px solid #042452;
+  border-radius: 10px;
+  width: 160px;
+  height: 38px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, tranform;
+  transition-property: box-shadow, tranform;
+}
+#subbutton:hover,
+.subutton:focus,
+.subbutton:active {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.subposi {
+  position: absolute;
+  top: 1300px;
+  left: 585px;
+}
+.resetposi {
+  position: absolute;
+  top: 1300px;
+  left: 805px;
+}
